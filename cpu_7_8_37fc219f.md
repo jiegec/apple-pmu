@@ -1,253 +1,253 @@
 Marketing name: Intel Skylake
 
 Performance counters:
-- LD_BLOCKS.NO_SR (3, 0x3): The number of times that split load operations are temporarily blocked because all resources for handling the split accesses are in use
-- LD_BLOCKS.STORE_FORWARD (3, 0x3): loads blocked by overlapping with store buffer that cannot be forwarded .
-- LD_BLOCKS_PARTIAL.ADDRESS_ALIAS (7, 0x7): False dependencies in MOB due to partial compare on address.
-- DTLB_LOAD_MISSES.WALK_PENDING (8, 0x8): Counts 1 per cycle for each PMH that is busy with a page walk for a load.
+- ARITH.DIVIDER_ACTIVE (20, 0x14): Cycles when divide unit is busy executing divide or square root operations. Accounts for integer and floating-point operations.
+- BACLEARS.ANY (230, 0xe6): Counts the total number when the front end is resteered, mainly when the BPU cannot provide a correct prediction and this is corrected by other branch handling mechanisms at the front end.
+- BR_INST_RETIRED.ALL_BRANCHES (196, 0xc4): All (macro) branch instructions retired.
+- BR_INST_RETIRED.ALL_BRANCHES_PEBS (196, 0xc4): All (macro) branch instructions retired. 
+- BR_INST_RETIRED.CONDITIONAL (196, 0xc4): Conditional branch instructions retired.
+- BR_INST_RETIRED.FAR_BRANCH (196, 0xc4): Far branch instructions retired.
+- BR_INST_RETIRED.NEAR_CALL (196, 0xc4): Direct and indirect near call instructions retired.
+- BR_INST_RETIRED.NEAR_RETURN (196, 0xc4): Return instructions retired.
+- BR_INST_RETIRED.NEAR_TAKEN (196, 0xc4): Taken branch instructions retired.
+- BR_INST_RETIRED.NOT_TAKEN (196, 0xc4): Not taken branch instructions retired.
+- BR_MISP_RETIRED.ALL_BRANCHES (197, 0xc5): All mispredicted macro branch instructions retired.
+- BR_MISP_RETIRED.ALL_BRANCHES_PEBS (197, 0xc5): Mispredicted macro branch instructions retired. 
+- BR_MISP_RETIRED.CONDITIONAL (197, 0xc5): Mispredicted conditional branch instructions retired.
+- BR_MISP_RETIRED.NEAR_TAKEN (197, 0xc5): number of near branch instructions retired that were mispredicted and taken.
+- CPU_CLK_THREAD_UNHALTED.ONE_THREAD_ACTIVE (60, 0x3c): Count XClk pulses when this thread is unhalted and the other thread is halted.
+- CPU_CLK_THREAD_UNHALTED.REF_XCLK (60, 0x3c): Reference cycles when the thread is unhalted (counts at 100 MHz rate)
+- CPU_CLK_THREAD_UNHALTED.REF_XCLK_ANY (60, 0x3c): Reference cycles when the at least one thread on the physical core is unhalted (counts at 100 MHz rate)
+- CPU_CLK_UNHALTED.THREAD_P (60, 0x3c): Thread cycles when thread is not in halt state
+- CPU_CLK_UNHALTED.THREAD_P_ANY (60, 0x3c): Core cycles when at least one thread on the physical core is not in halt state
+- CYCLE_ACTIVITY.CYCLES_L1D_MISS (163, 0xa3): Cycles while L1 cache miss demand load is outstanding.
+- CYCLE_ACTIVITY.CYCLES_L2_MISS (163, 0xa3): Cycles while L2 cache miss demand load is outstanding.
+- CYCLE_ACTIVITY.CYCLES_L3_MISS (163, 0xa3): Cycles while L3 cache miss demand load is outstanding.
+- CYCLE_ACTIVITY.CYCLES_MEM_ANY (163, 0xa3): Cycles while memory subsystem has an outstanding load.
+- CYCLE_ACTIVITY.STALLS_L1D_MISS (163, 0xa3): Execution stalls while L1 cache miss demand load is outstanding.
+- CYCLE_ACTIVITY.STALLS_L2_MISS (163, 0xa3): Execution stalls while L2 cache miss demand load is outstanding.
+- CYCLE_ACTIVITY.STALLS_L3_MISS (163, 0xa3): Execution stalls while L3 cache miss demand load is outstanding.
+- CYCLE_ACTIVITY.STALLS_MEM_ANY (163, 0xa3): Execution stalls while memory subsystem has an outstanding load.
+- CYCLE_ACTIVITY.STALLS_TOTAL (163, 0xa3): Total execution stalls.
+- DSB2MITE_SWITCHES.PENALTY_CYCLES (171, 0xab): Decode Stream Buffer (DSB)-to-MITE switch true penalty cycles.
 - DTLB_LOAD_MISSES.MISS_CAUSES_A_WALK (8, 0x8): Load misses in all DTLB levels that cause page walks
 - DTLB_LOAD_MISSES.STLB_HIT (8, 0x8): Loads that miss the DTLB and hit the STLB.
 - DTLB_LOAD_MISSES.WALK_ACTIVE (8, 0x8): Cycles when at least one PMH is busy with a page walk for a load.
 - DTLB_LOAD_MISSES.WALK_COMPLETED (8, 0x8): Load miss in all TLB levels causes a page walk that completes. (All page sizes)
-- INT_MISC.RECOVERY_CYCLES_ANY (13, 0xd): Core cycles the allocator was stalled due to recovery from earlier clear event for any thread running on the physical core (e.g. misprediction or memory nuke)
-- INT_MISC.RECOVERY_CYCLES (13, 0xd): Core cycles the allocator was stalled due to recovery from earlier clear event for this thread (e.g. misprediction or memory nuke)
-- INT_MISC.CLEAR_RESTEER_CYCLES (13, 0xd): Cycles the issue-stage is waiting for front-end to fetch from resteered path following branch misprediction or machine clear events.
-- UOPS_ISSUED.SLOW_LEA (14, 0xe): Number of slow LEA uops being allocated. A uop is generally considered SlowLea if it has 3 sources (e.g. 2 sources + immediate) regardless if as a result of LEA instruction or not.
-- UOPS_ISSUED.STALL_CYCLES (14, 0xe): Cycles when Resource Allocation Table (RAT) does not issue Uops to Reservation Station (RS) for the thread
-- UOPS_ISSUED.VECTOR_WIDTH_MISMATCH (14, 0xe): Uops inserted at issue-stage in order to preserve upper bits of vector registers.
-- UOPS_ISSUED.ANY (14, 0xe): Uops that Resource Allocation Table (RAT) issues to Reservation Station (RS)
-- ARITH.DIVIDER_ACTIVE (20, 0x14): Cycles when divide unit is busy executing divide or square root operations. Accounts for integer and floating-point operations.
-- L2_RQSTS.ALL_PF (36, 0x24): Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches
-- L2_RQSTS.DEMAND_DATA_RD_HIT (36, 0x24): Demand Data Read requests that hit L2 cache
-- L2_RQSTS.CODE_RD_HIT (36, 0x24): L2 cache hits when fetching instructions, code reads.
-- L2_RQSTS.REFERENCES (36, 0x24): All L2 requests
-- L2_RQSTS.RFO_HIT (36, 0x24): RFO requests that hit L2 cache
-- L2_RQSTS.CODE_RD_MISS (36, 0x24): L2 cache misses when fetching instructions
-- L2_RQSTS.ALL_DEMAND_REFERENCES (36, 0x24): Demand requests to L2 cache
-- L2_RQSTS.PF_MISS (36, 0x24): Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that miss L2 cache
-- L2_RQSTS.MISS (36, 0x24): All requests that miss L2 cache
-- L2_RQSTS.RFO_MISS (36, 0x24): RFO requests that miss L2 cache
-- L2_RQSTS.ALL_DEMAND_DATA_RD (36, 0x24): Demand Data Read requests
-- L2_RQSTS.ALL_RFO (36, 0x24): RFO requests to L2 cache
-- L2_RQSTS.ALL_CODE_RD (36, 0x24): L2 code requests
-- L2_RQSTS.PF_HIT (36, 0x24): Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that hit L2 cache
-- L2_RQSTS.ALL_DEMAND_MISS (36, 0x24): Demand requests that miss L2 cache
-- L2_RQSTS.DEMAND_DATA_RD_MISS (36, 0x24): Demand Data Read miss L2, no rejects
-- LONGEST_LAT_CACHE.MISS (46, 0x2e): Core-originated cacheable demand requests missed L3
-- LONGEST_LAT_CACHE.REFERENCE (46, 0x2e): Core-originated cacheable demand requests that refer to L3
-- CPU_CLK_UNHALTED.THREAD_P_ANY (60, 0x3c): Core cycles when at least one thread on the physical core is not in halt state
-- CPU_CLK_THREAD_UNHALTED.REF_XCLK (60, 0x3c): Reference cycles when the thread is unhalted (counts at 100 MHz rate)
-- CPU_CLK_THREAD_UNHALTED.ONE_THREAD_ACTIVE (60, 0x3c): Count XClk pulses when this thread is unhalted and the other thread is halted.
-- CPU_CLK_THREAD_UNHALTED.REF_XCLK_ANY (60, 0x3c): Reference cycles when the at least one thread on the physical core is unhalted (counts at 100 MHz rate)
-- CPU_CLK_UNHALTED.THREAD_P (60, 0x3c): Thread cycles when thread is not in halt state
-- L1D_PEND_MISS.FB_FULL (72, 0x48): Number of times a request needed a FB entry but there was no entry available for it. That is the FB unavailability was dominant reason for blocking the request. A request includes cacheable/uncacheable demands that is load, store or SW prefetch. HWP are e
-- L1D_PEND_MISS.PENDING_CYCLES_ANY (72, 0x48): Cycles with L1D load Misses outstanding from any thread on physical core
-- L1D_PEND_MISS.PENDING_CYCLES (72, 0x48): Cycles with L1D load Misses outstanding.
-- L1D_PEND_MISS.PENDING (72, 0x48): L1D miss oustandings duration in cycles
-- DTLB_STORE_MISSES.WALK_ACTIVE (73, 0x49): Cycles when at least one PMH is busy with a page walk for a store.
-- DTLB_STORE_MISSES.WALK_PENDING (73, 0x49): Counts 1 per cycle for each PMH that is busy with a page walk for a store.
-- DTLB_STORE_MISSES.WALK_COMPLETED (73, 0x49): Store misses in all TLB levels causes a page walk that completes. (All page sizes)
+- DTLB_LOAD_MISSES.WALK_PENDING (8, 0x8): Counts 1 per cycle for each PMH that is busy with a page walk for a load.
 - DTLB_STORE_MISSES.MISS_CAUSES_A_WALK (73, 0x49): Store misses in all DTLB levels that cause page walks
 - DTLB_STORE_MISSES.STLB_HIT (73, 0x49): Stores that miss the DTLB and hit the STLB.
-- LOAD_HIT_PRE.SW_PF (76, 0x4c): Demand load dispatches that hit L1D fill buffer (FB) allocated for software prefetch.
+- DTLB_STORE_MISSES.WALK_ACTIVE (73, 0x49): Cycles when at least one PMH is busy with a page walk for a store.
+- DTLB_STORE_MISSES.WALK_COMPLETED (73, 0x49): Store misses in all TLB levels causes a page walk that completes. (All page sizes)
+- DTLB_STORE_MISSES.WALK_PENDING (73, 0x49): Counts 1 per cycle for each PMH that is busy with a page walk for a store.
 - EPT.WALK_PENDING (79, 0x4f): Counts 1 per cycle for each PMH that is busy with a EPT (Extended Page Table) walk for any request type.
-- L1D.REPLACEMENT (81, 0x51): L1D data line replacements
-- TX_MEM.ABORT_HLE_STORE_TO_ELIDED_LOCK (84, 0x54): Number of times a HLE transactional region aborted due to a non XRELEASE prefixed instruction writing to an elided lock in the elision buffer
-- TX_MEM.ABORT_CAPACITY (84, 0x54): Number of times a transactional abort was signaled due to a data capacity limitation for transactional reads or writes.
-- TX_MEM.ABORT_CONFLICT (84, 0x54): Number of times a transactional abort was signaled due to a data conflict on a transactionally accessed address
-- TX_MEM.ABORT_HLE_ELISION_BUFFER_MISMATCH (84, 0x54): Number of times an HLE transactional execution aborted due to XRELEASE lock not satisfying the address and value requirements in the elision buffer
-- TX_MEM.HLE_ELISION_BUFFER_FULL (84, 0x54): Number of times HLE lock could not be elided due to ElisionBufferAvailable being zero.
-- TX_MEM.ABORT_HLE_ELISION_BUFFER_UNSUPPORTED_ALIGNMENT (84, 0x54): Number of times an HLE transactional execution aborted due to an unsupported read alignment from the elision buffer.
-- TX_MEM.ABORT_HLE_ELISION_BUFFER_NOT_EMPTY (84, 0x54): Number of times an HLE transactional execution aborted due to NoAllocatedElisionBuffer being non-zero.
-- TX_EXEC.MISC5 (93, 0x5d): Counts the number of times an HLE XACQUIRE instruction was executed inside an RTM transactional region
-- TX_EXEC.MISC4 (93, 0x5d): Counts the number of times a XBEGIN instruction was executed inside an HLE transactional region.
-- TX_EXEC.MISC3 (93, 0x5d): Counts the number of times an instruction execution caused the transactional nest count supported to be exceeded
-- TX_EXEC.MISC2 (93, 0x5d): Counts the number of times a class of instructions (e.g., vzeroupper) that may cause a transactional abort was executed inside a transactional region
-- TX_EXEC.MISC1 (93, 0x5d): Counts the number of times a class of instructions that may cause a transactional abort was executed. Since this is the count of execution, it may not always cause a transactional abort.
-- RS_EVENTS.EMPTY_CYCLES (94, 0x5e): Cycles when Reservation Station (RS) is empty for the thread
-- RS_EVENTS.EMPTY_END (94, 0x5e): Counts end of periods where the Reservation Station (RS) was empty. Could be useful to precisely locate Frontend Latency Bound issues.
-- OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD (96, 0x60): Offcore outstanding Demand Data Read transactions in uncore queue.
-- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD (96, 0x60): Cycles when offcore outstanding Demand Data Read transactions are present in SuperQueue (SQ), queue to uncore
-- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD (96, 0x60): Cycles when offcore outstanding cacheable Core Data Read transactions are present in SuperQueue (SQ), queue to uncore.
-- OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6 (96, 0x60): Cycles with at least 6 offcore outstanding Demand Data Read transactions in uncore queue
-- OFFCORE_REQUESTS_OUTSTANDING.L3_MISS_DEMAND_DATA_RD (96, 0x60): Counts number of Offcore outstanding Demand Data Read requests who miss L3 cache in the superQ every cycle.
-- OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO (96, 0x60): Offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore, every cycle
-- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO (96, 0x60): Cycles with offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore.
-- OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD (96, 0x60): Offcore outstanding cacheable Core Data Read transactions in SuperQueue (SQ), queue to uncore
-- OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD (96, 0x60): Offcore outstanding Code Reads transactions in the SuperQueue (SQ), queue to uncore, every cycle. 
-- OFFCORE_REQUESTS_OUTSTANDING.L3_MISS_DEMAND_DATA_RD_GE_6 (96, 0x60): Cycles with at least 6 Demand Data Read requests who miss L3 cache in the superQ
-- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_CODE_RD (96, 0x60): Cycles with offcore outstanding Code Reads transactions in the SuperQueue (SQ), queue to uncore.
-- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_L3_MISS_DEMAND_DATA_RD (96, 0x60): Cycles with at least 1 Demand Data Read requests who miss L3 cache in the superQ
-- LOCK_CYCLES.CACHE_LOCK_DURATION (99, 0x63): Cycles when L1D is locked
-- IDQ.ALL_MITE_CYCLES_ANY_UOPS (121, 0x79): Cycles MITE is delivering any Uop
-- IDQ.MS_SWITCHES (121, 0x79): Number of switches from DSB (Decode Stream Buffer) or MITE (legacy decode pipeline) to the Microcode Sequencer
-- IDQ.DSB_CYCLES (121, 0x79): Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from Decode Stream Buffer (DSB) path
-- IDQ.MS_MITE_UOPS (121, 0x79): Uops initiated by MITE and delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy
-- IDQ.ALL_DSB_CYCLES_4_UOPS (121, 0x79): Cycles Decode Stream Buffer (DSB) is delivering 4 Uops
-- IDQ.MITE_UOPS (121, 0x79): Uops delivered to Instruction Decode Queue (IDQ) from MITE path
-- IDQ.MITE_CYCLES (121, 0x79): Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from MITE path
-- IDQ.ALL_DSB_CYCLES_ANY_UOPS (121, 0x79): Cycles Decode Stream Buffer (DSB) is delivering any Uop
-- IDQ.MS_UOPS (121, 0x79): Uops delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy
-- IDQ.DSB_UOPS (121, 0x79): Uops delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path
-- IDQ.ALL_MITE_CYCLES_4_UOPS (121, 0x79): Cycles MITE is delivering 4 Uops
-- IDQ.MS_CYCLES (121, 0x79): Cycles when uops are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy
-- IDQ.MS_DSB_CYCLES (121, 0x79): Cycles when uops initiated by Decode Stream Buffer (DSB) are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy
-- ICACHE_16B.IFDATA_STALL (128, 0x80): Cycles where a code fetch is stalled due to L1 instruction cache miss.
-- ICACHE_64B.IFTAG_STALL (131, 0x83): Cycles where a code fetch is stalled due to L1 instruction cache tag miss.
-- ICACHE_64B.IFTAG_MISS (131, 0x83): Instruction fetch tag lookups that miss in the instruction cache (L1I). Counts at 64-byte cache-line granularity.
-- ICACHE_64B.IFTAG_HIT (131, 0x83): Instruction fetch tag lookups that hit in the instruction cache (L1I). Counts at 64-byte cache-line granularity.
-- ITLB_MISSES.MISS_CAUSES_A_WALK (133, 0x85): Misses at all ITLB levels that cause page walks
-- ITLB_MISSES.STLB_HIT (133, 0x85): Intruction fetch requests that miss the ITLB and hit the STLB.
-- ITLB_MISSES.WALK_PENDING (133, 0x85): Counts 1 per cycle for each PMH that is busy with a page walk for an instruction fetch request.
-- ITLB_MISSES.WALK_COMPLETED (133, 0x85): Code miss in all TLB levels causes a page walk that completes. (All page sizes)
-- ILD_STALL.LCP (135, 0x87): Stalls caused by changing prefix length of the instruction.
-- IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_3_UOP_DELIV.CORE (156, 0x9c): Cycles with less than 3 uops delivered by the front end.
-- IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE (156, 0x9c): Cycles per thread when 4 or more uops are not delivered to Resource Allocation Table (RAT) when backend of the machine is not stalled
-- IDQ_UOPS_NOT_DELIVERED.CORE (156, 0x9c): Uops not delivered to Resource Allocation Table (RAT) per thread when backend of the machine is not stalled
-- IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_1_UOP_DELIV.CORE (156, 0x9c): Cycles per thread when 3 or more uops are not delivered to Resource Allocation Table (RAT) when backend of the machine is not stalled
-- IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_2_UOP_DELIV.CORE (156, 0x9c): Cycles with less than 2 uops delivered by the front end.
-- IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK (156, 0x9c): Counts cycles FE delivered 4 uops or Resource Allocation Table (RAT) was stalling FE.
-- UOPS_DISPATCHED_PORT.PORT_6 (161, 0xa1): Cycles per thread when uops are executed in port 6
-- UOPS_DISPATCHED_PORT.PORT_1 (161, 0xa1): Cycles per thread when uops are executed in port 1
-- UOPS_DISPATCHED_PORT.PORT_4 (161, 0xa1): Cycles per thread when uops are executed in port 4
-- UOPS_DISPATCHED_PORT.PORT_7 (161, 0xa1): Cycles per thread when uops are executed in port 7
-- UOPS_DISPATCHED_PORT.PORT_2 (161, 0xa1): Cycles per thread when uops are executed in port 2
-- UOPS_DISPATCHED_PORT.PORT_5 (161, 0xa1): Cycles per thread when uops are executed in port 5
-- UOPS_DISPATCHED_PORT.PORT_0 (161, 0xa1): Cycles per thread when uops are executed in port 0
-- UOPS_DISPATCHED_PORT.PORT_3 (161, 0xa1): Cycles per thread when uops are executed in port 3
-- RESOURCE_STALLS.SB (162, 0xa2): Cycles stalled due to no store buffers available. (not including draining form sync).
-- RESOURCE_STALLS.ANY (162, 0xa2): Resource-related stall cycles
-- CYCLE_ACTIVITY.STALLS_L3_MISS (163, 0xa3): Execution stalls while L3 cache miss demand load is outstanding.
-- CYCLE_ACTIVITY.CYCLES_L2_MISS (163, 0xa3): Cycles while L2 cache miss demand load is outstanding.
-- CYCLE_ACTIVITY.CYCLES_L1D_MISS (163, 0xa3): Cycles while L1 cache miss demand load is outstanding.
-- CYCLE_ACTIVITY.STALLS_MEM_ANY (163, 0xa3): Execution stalls while memory subsystem has an outstanding load.
-- CYCLE_ACTIVITY.CYCLES_L3_MISS (163, 0xa3): Cycles while L3 cache miss demand load is outstanding.
-- CYCLE_ACTIVITY.STALLS_L1D_MISS (163, 0xa3): Execution stalls while L1 cache miss demand load is outstanding.
-- CYCLE_ACTIVITY.STALLS_TOTAL (163, 0xa3): Total execution stalls.
-- CYCLE_ACTIVITY.STALLS_L2_MISS (163, 0xa3): Execution stalls while L2 cache miss demand load is outstanding.
-- CYCLE_ACTIVITY.CYCLES_MEM_ANY (163, 0xa3): Cycles while memory subsystem has an outstanding load.
+- EXE_ACTIVITY.1_PORTS_UTIL (166, 0xa6): Cycles total of 1 uop is executed on all ports and Reservation Station was not empty.
+- EXE_ACTIVITY.2_PORTS_UTIL (166, 0xa6): Cycles total of 2 uops are executed on all ports and Reservation Station was not empty.
+- EXE_ACTIVITY.3_PORTS_UTIL (166, 0xa6): Cycles total of 3 uops are executed on all ports and Reservation Station was not empty.
+- EXE_ACTIVITY.4_PORTS_UTIL (166, 0xa6): Cycles total of 4 uops are executed on all ports and Reservation Station was not empty.
 - EXE_ACTIVITY.BOUND_ON_STORES (166, 0xa6): Cycles where the Store Buffer was full and no outstanding load.
 - EXE_ACTIVITY.EXE_BOUND_0_PORTS (166, 0xa6): Cycles where no uops were executed, the Reservation Station was not empty, the Store Buffer was full and there was no outstanding load.
-- EXE_ACTIVITY.4_PORTS_UTIL (166, 0xa6): Cycles total of 4 uops are executed on all ports and Reservation Station was not empty.
-- EXE_ACTIVITY.3_PORTS_UTIL (166, 0xa6): Cycles total of 3 uops are executed on all ports and Reservation Station was not empty.
-- EXE_ACTIVITY.2_PORTS_UTIL (166, 0xa6): Cycles total of 2 uops are executed on all ports and Reservation Station was not empty.
-- EXE_ACTIVITY.1_PORTS_UTIL (166, 0xa6): Cycles total of 1 uop is executed on all ports and Reservation Station was not empty.
-- LSD.CYCLES_ACTIVE (168, 0xa8): Cycles Uops delivered by the LSD, but didn't come from the decoder
-- LSD.CYCLES_4_UOPS (168, 0xa8): Cycles 4 Uops delivered by the LSD, but didn't come from the decoder
-- LSD.UOPS (168, 0xa8): Number of Uops delivered by the LSD.
-- DSB2MITE_SWITCHES.PENALTY_CYCLES (171, 0xab): Decode Stream Buffer (DSB)-to-MITE switch true penalty cycles.
-- ITLB.ITLB_FLUSH (174, 0xae): Flushing of the Instruction TLB (ITLB) pages, includes 4k/2M/4M pages.
-- OFFCORE_REQUESTS.ALL_DATA_RD (176, 0xb0): Demand and prefetch data reads
-- OFFCORE_REQUESTS.L3_MISS_DEMAND_DATA_RD (176, 0xb0): Demand Data Read requests who miss L3 cache
-- OFFCORE_REQUESTS.DEMAND_CODE_RD (176, 0xb0): Cacheable and noncachaeble code read requests
-- OFFCORE_REQUESTS.DEMAND_DATA_RD (176, 0xb0): Demand Data Read requests sent to uncore
-- OFFCORE_REQUESTS.ALL_REQUESTS (176, 0xb0): Any memory transaction that reached the SQ.
-- OFFCORE_REQUESTS.DEMAND_RFO (176, 0xb0): Demand RFO requests including regular RFOs, locks, ItoM
-- UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC (177, 0xb1): Cycles where at least 1 uop was executed per-thread
-- UOPS_EXECUTED.X87 (177, 0xb1): Counts the number of x87 uops dispatched.
-- UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC (177, 0xb1): Cycles where at least 2 uops were executed per-thread
-- UOPS_EXECUTED.THREAD (177, 0xb1): Counts the number of uops to be executed per-thread each cycle.
-- UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC (177, 0xb1): Cycles where at least 3 uops were executed per-thread
-- UOPS_EXECUTED.CORE_CYCLES_GE_1 (177, 0xb1): Cycles at least 1 micro-op is executed from any thread on physical core
-- UOPS_EXECUTED.CYCLES_GE_4_UOPS_EXEC (177, 0xb1): Cycles where at least 4 uops were executed per-thread
-- UOPS_EXECUTED.CORE_CYCLES_GE_2 (177, 0xb1): Cycles at least 2 micro-op is executed from any thread on physical core
-- UOPS_EXECUTED.CORE_CYCLES_GE_3 (177, 0xb1): Cycles at least 3 micro-op is executed from any thread on physical core
-- UOPS_EXECUTED.CORE_CYCLES_GE_4 (177, 0xb1): Cycles at least 4 micro-op is executed from any thread on physical core
-- UOPS_EXECUTED.CORE (177, 0xb1): Number of uops executed on the core.
-- UOPS_EXECUTED.CORE_CYCLES_NONE (177, 0xb1): Cycles with no micro-ops executed from any thread on physical core
-- UOPS_EXECUTED.STALL_CYCLES (177, 0xb1): Counts number of cycles no uops were dispatched to be executed on this thread.
-- OFFCORE_REQUESTS_BUFFER.SQ_FULL (178, 0xb2): Offcore requests buffer cannot take more entries for this thread core.
-- OFFCORE_RESPONSE (183, 0xb7): Offcore response can be programmed only with a specific pair of event select and counter MSR, and with specific event codes and predefine mask bit value in a dedicated MSR to specify attributes of the offcore transaction
-- TLB_FLUSH.DTLB_THREAD (189, 0xbd): DTLB flush attempts of the thread-specific entries
-- TLB_FLUSH.STLB_ANY (189, 0xbd): STLB flush attempts
+- FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE (199, 0xc7): Number of SSE/AVX computational 128-bit packed double precision floating-point instructions retired.  Each count represents 2 computations. Applies to SSE* and AVX* packed double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
+- FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE (199, 0xc7): Number of SSE/AVX computational 128-bit packed single precision floating-point instructions retired.  Each count represents 4 computations. Applies to SSE* and AVX* packed single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.  
+- FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE (199, 0xc7): Number of SSE/AVX computational 256-bit packed double precision floating-point instructions retired.  Each count represents 4 computations. Applies to SSE* and AVX* packed double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
+- FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE (199, 0xc7): Number of SSE/AVX computational 256-bit packed single precision floating-point instructions retired.  Each count represents 8 computations. Applies to SSE* and AVX* packed single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
+- FP_ARITH_INST_RETIRED.SCALAR_DOUBLE (199, 0xc7): Number of SSE/AVX computational scalar double precision floating-point instructions retired.  Each count represents 1 computation. Applies to SSE* and AVX* scalar double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT FM(N)ADD/SUB.  FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
+- FP_ARITH_INST_RETIRED.SCALAR_SINGLE (199, 0xc7): Number of SSE/AVX computational scalar single precision floating-point instructions retired.  Each count represents 1 computation. Applies to SSE* and AVX* scalar single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT FM(N)ADD/SUB.  FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
+- FP_ASSIST.ANY (202, 0xca): Cycles with any input/output SSE or FP assist
+- FRONTEND_RETIRED.DSB_MISS (198, 0xc6): Retired Instructions who experienced decode stream buffer (DSB - the decoded insturction-cache) miss.
+- FRONTEND_RETIRED.ITLB_MISS (198, 0xc6): Retired Instructions who experienced iTLB true miss.
+- FRONTEND_RETIRED.L1I_MISS (198, 0xc6): Retired Instructions who experienced Instruction L1 Cache true miss.
+- FRONTEND_RETIRED.L2_MISS (198, 0xc6): Retired Instructions who experienced Instruction L2 Cache true miss.
+- FRONTEND_RETIRED.LATENCY_GE_128 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 128 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_16 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 16 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_2 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 2 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_256 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 256 cycles which was not interrupted by a back-end stall
+- FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_1 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end had at least 1 bubble-slot for a period of 2 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_2 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end had at least 2 bubble-slots for a period of 2 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_3 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end had at least 3 bubble-slots for a period of 2 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_32 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 32 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_4 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 4 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_512 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 512 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_64 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 64 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.LATENCY_GE_8 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 8 cycles which was not interrupted by a back-end stall.
+- FRONTEND_RETIRED.STLB_MISS (198, 0xc6): Retired Instructions who experienced STLB (2nd level TLB) true miss.
+- HLE_RETIRED.ABORTED (200, 0xc8): Number of times an HLE execution aborted due to any reasons (multiple categories may count as one). 
+- HLE_RETIRED.ABORTED_EVENTS (200, 0xc8): Number of times an HLE execution aborted due to unfriendly events (such as interrupts).
+- HLE_RETIRED.ABORTED_MEM (200, 0xc8): Number of times an HLE execution aborted due to various memory events (e.g., read/write capacity and conflicts).
+- HLE_RETIRED.ABORTED_MEMTYPE (200, 0xc8): Number of times an HLE execution aborted due to incompatible memory type
+- HLE_RETIRED.ABORTED_TIMER (200, 0xc8): Number of times an HLE execution aborted due to hardware timer expiration.
+- HLE_RETIRED.ABORTED_UNFRIENDLY (200, 0xc8): Number of times an HLE execution aborted due to HLE-unfriendly instructions and certain unfriendly events (such as AD assists etc.). 
+- HLE_RETIRED.COMMIT (200, 0xc8): Number of times an HLE execution successfully committed
+- HLE_RETIRED.START (200, 0xc8): Number of times an HLE execution started.
+- HW_INTERRUPTS.RECEIVED (203, 0xcb): Number of hardware interrupts received by the processor.
+- ICACHE_16B.IFDATA_STALL (128, 0x80): Cycles where a code fetch is stalled due to L1 instruction cache miss.
+- ICACHE_64B.IFTAG_HIT (131, 0x83): Instruction fetch tag lookups that hit in the instruction cache (L1I). Counts at 64-byte cache-line granularity.
+- ICACHE_64B.IFTAG_MISS (131, 0x83): Instruction fetch tag lookups that miss in the instruction cache (L1I). Counts at 64-byte cache-line granularity.
+- ICACHE_64B.IFTAG_STALL (131, 0x83): Cycles where a code fetch is stalled due to L1 instruction cache tag miss.
+- IDQ.ALL_DSB_CYCLES_4_UOPS (121, 0x79): Cycles Decode Stream Buffer (DSB) is delivering 4 Uops
+- IDQ.ALL_DSB_CYCLES_ANY_UOPS (121, 0x79): Cycles Decode Stream Buffer (DSB) is delivering any Uop
+- IDQ.ALL_MITE_CYCLES_4_UOPS (121, 0x79): Cycles MITE is delivering 4 Uops
+- IDQ.ALL_MITE_CYCLES_ANY_UOPS (121, 0x79): Cycles MITE is delivering any Uop
+- IDQ.DSB_CYCLES (121, 0x79): Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from Decode Stream Buffer (DSB) path
+- IDQ.DSB_UOPS (121, 0x79): Uops delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path
+- IDQ.MITE_CYCLES (121, 0x79): Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from MITE path
+- IDQ.MITE_UOPS (121, 0x79): Uops delivered to Instruction Decode Queue (IDQ) from MITE path
+- IDQ.MS_CYCLES (121, 0x79): Cycles when uops are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy
+- IDQ.MS_DSB_CYCLES (121, 0x79): Cycles when uops initiated by Decode Stream Buffer (DSB) are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy
+- IDQ.MS_MITE_UOPS (121, 0x79): Uops initiated by MITE and delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy
+- IDQ.MS_SWITCHES (121, 0x79): Number of switches from DSB (Decode Stream Buffer) or MITE (legacy decode pipeline) to the Microcode Sequencer
+- IDQ.MS_UOPS (121, 0x79): Uops delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy
+- IDQ_UOPS_NOT_DELIVERED.CORE (156, 0x9c): Uops not delivered to Resource Allocation Table (RAT) per thread when backend of the machine is not stalled
+- IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE (156, 0x9c): Cycles per thread when 4 or more uops are not delivered to Resource Allocation Table (RAT) when backend of the machine is not stalled
+- IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK (156, 0x9c): Counts cycles FE delivered 4 uops or Resource Allocation Table (RAT) was stalling FE.
+- IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_1_UOP_DELIV.CORE (156, 0x9c): Cycles per thread when 3 or more uops are not delivered to Resource Allocation Table (RAT) when backend of the machine is not stalled
+- IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_2_UOP_DELIV.CORE (156, 0x9c): Cycles with less than 2 uops delivered by the front end.
+- IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_3_UOP_DELIV.CORE (156, 0x9c): Cycles with less than 3 uops delivered by the front end.
+- ILD_STALL.LCP (135, 0x87): Stalls caused by changing prefix length of the instruction.
 - INST_RETIRED.ANY_P (192, 0xc0): Number of instructions retired. General Counter   - architectural event
 - INST_RETIRED.PREC_DIST (192, 0xc0): Precise instruction retired event with HW to reduce effect of PEBS shadow in IP distribution
-- OTHER_ASSISTS.ANY (193, 0xc1): Number of times a microcode assist is invoked by HW other than FP-assist. Examples include AD (page Access Dirty) and AVX* related assists.
-- UOPS_RETIRED.STALL_CYCLES (194, 0xc2): Cycles without actually retired uops.
-- UOPS_RETIRED.RETIRE_SLOTS (194, 0xc2): Retirement slots used.
-- UOPS_RETIRED.TOTAL_CYCLES (194, 0xc2): Cycles with less than 10 actually retired uops.
+- INT_MISC.CLEAR_RESTEER_CYCLES (13, 0xd): Cycles the issue-stage is waiting for front-end to fetch from resteered path following branch misprediction or machine clear events.
+- INT_MISC.RECOVERY_CYCLES (13, 0xd): Core cycles the allocator was stalled due to recovery from earlier clear event for this thread (e.g. misprediction or memory nuke)
+- INT_MISC.RECOVERY_CYCLES_ANY (13, 0xd): Core cycles the allocator was stalled due to recovery from earlier clear event for any thread running on the physical core (e.g. misprediction or memory nuke)
+- ITLB.ITLB_FLUSH (174, 0xae): Flushing of the Instruction TLB (ITLB) pages, includes 4k/2M/4M pages.
+- ITLB_MISSES.MISS_CAUSES_A_WALK (133, 0x85): Misses at all ITLB levels that cause page walks
+- ITLB_MISSES.STLB_HIT (133, 0x85): Intruction fetch requests that miss the ITLB and hit the STLB.
+- ITLB_MISSES.WALK_COMPLETED (133, 0x85): Code miss in all TLB levels causes a page walk that completes. (All page sizes)
+- ITLB_MISSES.WALK_PENDING (133, 0x85): Counts 1 per cycle for each PMH that is busy with a page walk for an instruction fetch request.
+- L1D.REPLACEMENT (81, 0x51): L1D data line replacements
+- L1D_PEND_MISS.FB_FULL (72, 0x48): Number of times a request needed a FB entry but there was no entry available for it. That is the FB unavailability was dominant reason for blocking the request. A request includes cacheable/uncacheable demands that is load, store or SW prefetch. HWP are e
+- L1D_PEND_MISS.PENDING (72, 0x48): L1D miss oustandings duration in cycles
+- L1D_PEND_MISS.PENDING_CYCLES (72, 0x48): Cycles with L1D load Misses outstanding.
+- L1D_PEND_MISS.PENDING_CYCLES_ANY (72, 0x48): Cycles with L1D load Misses outstanding from any thread on physical core
+- L2_LINES_IN.ALL (241, 0xf1): L2 cache lines filling L2
+- L2_RQSTS.ALL_CODE_RD (36, 0x24): L2 code requests
+- L2_RQSTS.ALL_DEMAND_DATA_RD (36, 0x24): Demand Data Read requests
+- L2_RQSTS.ALL_DEMAND_MISS (36, 0x24): Demand requests that miss L2 cache
+- L2_RQSTS.ALL_DEMAND_REFERENCES (36, 0x24): Demand requests to L2 cache
+- L2_RQSTS.ALL_PF (36, 0x24): Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches
+- L2_RQSTS.ALL_RFO (36, 0x24): RFO requests to L2 cache
+- L2_RQSTS.CODE_RD_HIT (36, 0x24): L2 cache hits when fetching instructions, code reads.
+- L2_RQSTS.CODE_RD_MISS (36, 0x24): L2 cache misses when fetching instructions
+- L2_RQSTS.DEMAND_DATA_RD_HIT (36, 0x24): Demand Data Read requests that hit L2 cache
+- L2_RQSTS.DEMAND_DATA_RD_MISS (36, 0x24): Demand Data Read miss L2, no rejects
+- L2_RQSTS.MISS (36, 0x24): All requests that miss L2 cache
+- L2_RQSTS.PF_HIT (36, 0x24): Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that hit L2 cache
+- L2_RQSTS.PF_MISS (36, 0x24): Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that miss L2 cache
+- L2_RQSTS.REFERENCES (36, 0x24): All L2 requests
+- L2_RQSTS.RFO_HIT (36, 0x24): RFO requests that hit L2 cache
+- L2_RQSTS.RFO_MISS (36, 0x24): RFO requests that miss L2 cache
+- L2_TRANS.L2_WB (240, 0xf0): L2 writebacks that access L2 cache
+- LD_BLOCKS.NO_SR (3, 0x3): The number of times that split load operations are temporarily blocked because all resources for handling the split accesses are in use
+- LD_BLOCKS.STORE_FORWARD (3, 0x3): loads blocked by overlapping with store buffer that cannot be forwarded .
+- LD_BLOCKS_PARTIAL.ADDRESS_ALIAS (7, 0x7): False dependencies in MOB due to partial compare on address.
+- LOAD_HIT_PRE.SW_PF (76, 0x4c): Demand load dispatches that hit L1D fill buffer (FB) allocated for software prefetch.
+- LOCK_CYCLES.CACHE_LOCK_DURATION (99, 0x63): Cycles when L1D is locked
+- LONGEST_LAT_CACHE.MISS (46, 0x2e): Core-originated cacheable demand requests missed L3
+- LONGEST_LAT_CACHE.REFERENCE (46, 0x2e): Core-originated cacheable demand requests that refer to L3
+- LSD.CYCLES_4_UOPS (168, 0xa8): Cycles 4 Uops delivered by the LSD, but didn't come from the decoder
+- LSD.CYCLES_ACTIVE (168, 0xa8): Cycles Uops delivered by the LSD, but didn't come from the decoder
+- LSD.UOPS (168, 0xa8): Number of Uops delivered by the LSD.
 - MACHINE_CLEARS.COUNT (195, 0xc3): Number of machine clears (nukes) of any type. 
 - MACHINE_CLEARS.MEMORY_ORDERING (195, 0xc3): Counts the number of machine clears due to memory order conflicts.
 - MACHINE_CLEARS.SMC (195, 0xc3): Self-modifying code (SMC) detected.
-- BR_INST_RETIRED.ALL_BRANCHES (196, 0xc4): All (macro) branch instructions retired.
-- BR_INST_RETIRED.NEAR_CALL (196, 0xc4): Direct and indirect near call instructions retired.
-- BR_INST_RETIRED.FAR_BRANCH (196, 0xc4): Far branch instructions retired.
-- BR_INST_RETIRED.ALL_BRANCHES_PEBS (196, 0xc4): All (macro) branch instructions retired. 
-- BR_INST_RETIRED.NEAR_RETURN (196, 0xc4): Return instructions retired.
-- BR_INST_RETIRED.NEAR_TAKEN (196, 0xc4): Taken branch instructions retired.
-- BR_INST_RETIRED.NOT_TAKEN (196, 0xc4): Not taken branch instructions retired.
-- BR_INST_RETIRED.CONDITIONAL (196, 0xc4): Conditional branch instructions retired.
-- BR_MISP_RETIRED.ALL_BRANCHES (197, 0xc5): All mispredicted macro branch instructions retired.
-- BR_MISP_RETIRED.NEAR_TAKEN (197, 0xc5): number of near branch instructions retired that were mispredicted and taken.
-- BR_MISP_RETIRED.CONDITIONAL (197, 0xc5): Mispredicted conditional branch instructions retired.
-- BR_MISP_RETIRED.ALL_BRANCHES_PEBS (197, 0xc5): Mispredicted macro branch instructions retired. 
-- FRONTEND_RETIRED.LATENCY_GE_2 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 2 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.LATENCY_GE_256 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 256 cycles which was not interrupted by a back-end stall
-- FRONTEND_RETIRED.LATENCY_GE_4 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 4 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_3 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end had at least 3 bubble-slots for a period of 2 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.LATENCY_GE_8 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 8 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.L1I_MISS (198, 0xc6): Retired Instructions who experienced Instruction L1 Cache true miss.
-- FRONTEND_RETIRED.LATENCY_GE_16 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 16 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.ITLB_MISS (198, 0xc6): Retired Instructions who experienced iTLB true miss.
-- FRONTEND_RETIRED.L2_MISS (198, 0xc6): Retired Instructions who experienced Instruction L2 Cache true miss.
-- FRONTEND_RETIRED.STLB_MISS (198, 0xc6): Retired Instructions who experienced STLB (2nd level TLB) true miss.
-- FRONTEND_RETIRED.LATENCY_GE_128 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 128 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_2 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end had at least 2 bubble-slots for a period of 2 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.LATENCY_GE_512 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 512 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.DSB_MISS (198, 0xc6): Retired Instructions who experienced decode stream buffer (DSB - the decoded insturction-cache) miss.
-- FRONTEND_RETIRED.LATENCY_GE_64 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 64 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_1 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end had at least 1 bubble-slot for a period of 2 cycles which was not interrupted by a back-end stall.
-- FRONTEND_RETIRED.LATENCY_GE_32 (198, 0xc6): Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 32 cycles which was not interrupted by a back-end stall.
-- FP_ARITH_INST_RETIRED.SCALAR_SINGLE (199, 0xc7): Number of SSE/AVX computational scalar single precision floating-point instructions retired.  Each count represents 1 computation. Applies to SSE* and AVX* scalar single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT FM(N)ADD/SUB.  FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
-- FP_ARITH_INST_RETIRED.SCALAR_DOUBLE (199, 0xc7): Number of SSE/AVX computational scalar double precision floating-point instructions retired.  Each count represents 1 computation. Applies to SSE* and AVX* scalar double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT FM(N)ADD/SUB.  FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
-- FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE (199, 0xc7): Number of SSE/AVX computational 256-bit packed double precision floating-point instructions retired.  Each count represents 4 computations. Applies to SSE* and AVX* packed double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
-- FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE (199, 0xc7): Number of SSE/AVX computational 128-bit packed double precision floating-point instructions retired.  Each count represents 2 computations. Applies to SSE* and AVX* packed double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
-- FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE (199, 0xc7): Number of SSE/AVX computational 256-bit packed single precision floating-point instructions retired.  Each count represents 8 computations. Applies to SSE* and AVX* packed single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.
-- FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE (199, 0xc7): Number of SSE/AVX computational 128-bit packed single precision floating-point instructions retired.  Each count represents 4 computations. Applies to SSE* and AVX* packed single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.  
-- HLE_RETIRED.ABORTED_MEMTYPE (200, 0xc8): Number of times an HLE execution aborted due to incompatible memory type
-- HLE_RETIRED.ABORTED_TIMER (200, 0xc8): Number of times an HLE execution aborted due to hardware timer expiration.
-- HLE_RETIRED.ABORTED_EVENTS (200, 0xc8): Number of times an HLE execution aborted due to unfriendly events (such as interrupts).
-- HLE_RETIRED.COMMIT (200, 0xc8): Number of times an HLE execution successfully committed
-- HLE_RETIRED.ABORTED_MEM (200, 0xc8): Number of times an HLE execution aborted due to various memory events (e.g., read/write capacity and conflicts).
-- HLE_RETIRED.START (200, 0xc8): Number of times an HLE execution started.
-- HLE_RETIRED.ABORTED (200, 0xc8): Number of times an HLE execution aborted due to any reasons (multiple categories may count as one). 
-- HLE_RETIRED.ABORTED_UNFRIENDLY (200, 0xc8): Number of times an HLE execution aborted due to HLE-unfriendly instructions and certain unfriendly events (such as AD assists etc.). 
-- RTM_RETIRED.ABORTED_MEM (201, 0xc9): Number of times an RTM execution aborted due to various memory events (e.g. read/write capacity and conflicts)
-- RTM_RETIRED.COMMIT (201, 0xc9): Number of times an RTM execution successfully committed
-- RTM_RETIRED.ABORTED_TIMER (201, 0xc9): Number of times an RTM execution aborted due to uncommon conditions.
-- RTM_RETIRED.ABORTED_MEMTYPE (201, 0xc9): Number of times an RTM execution aborted due to incompatible memory type
-- RTM_RETIRED.START (201, 0xc9): Number of times an RTM execution started.
-- RTM_RETIRED.ABORTED_UNFRIENDLY (201, 0xc9): Number of times an RTM execution aborted due to HLE-unfriendly instructions
-- RTM_RETIRED.ABORTED (201, 0xc9): Number of times an RTM execution aborted due to any reasons (multiple categories may count as one). 
-- RTM_RETIRED.ABORTED_EVENTS (201, 0xc9): Number of times an RTM execution aborted due to none of the previous 4 categories (e.g. interrupt)
-- FP_ASSIST.ANY (202, 0xca): Cycles with any input/output SSE or FP assist
-- HW_INTERRUPTS.RECEIVED (203, 0xcb): Number of hardware interrupts received by the processor.
+- MEM_INST_RETIRED.ALL_LOADS (208, 0xd0): All retired load instructions.
+- MEM_INST_RETIRED.ALL_STORES (208, 0xd0): All retired store instructions.
+- MEM_INST_RETIRED.LOCK_LOADS (208, 0xd0): Retired load instructions with locked access.
+- MEM_INST_RETIRED.SPLIT_LOADS (208, 0xd0): Retired load instructions that split across a cacheline boundary.
+- MEM_INST_RETIRED.SPLIT_STORES (208, 0xd0): Retired store instructions that split across a cacheline boundary.
+- MEM_INST_RETIRED.STLB_MISS_LOADS (208, 0xd0): Retired load instructions that miss the STLB.
+- MEM_INST_RETIRED.STLB_MISS_STORES (208, 0xd0): Retired store instructions that miss the STLB.
+- MEM_LOAD_L3_HIT_RETIRED.XSNP_HIT (210, 0xd2): Retired load instructions which data sources were L3 and cross-core snoop hits in on-pkg core cache
+- MEM_LOAD_L3_HIT_RETIRED.XSNP_HITM (210, 0xd2): Retired load instructions which data sources were HitM responses from shared L3
+- MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS (210, 0xd2): Retired load instructions which data sources were L3 hit and cross-core snoop missed in on-pkg core cache.
+- MEM_LOAD_L3_HIT_RETIRED.XSNP_NONE (210, 0xd2): Retired load instructions which data sources were hits in L3 without snoops required
+- MEM_LOAD_RETIRED.FB_HIT (209, 0xd1): Retired load instructions which data sources were load missed L1 but hit FB due to preceding miss to the same cache line with data not ready
+- MEM_LOAD_RETIRED.L1_HIT (209, 0xd1): Retired load instructions with L1 cache hits as data sources
+- MEM_LOAD_RETIRED.L1_MISS (209, 0xd1): Retired load instructions missed L1 cache as data sources
+- MEM_LOAD_RETIRED.L2_HIT (209, 0xd1): Retired load instructions with L2 cache hits as data sources
+- MEM_LOAD_RETIRED.L2_MISS (209, 0xd1): Retired load instructions missed L2 cache as data sources
+- MEM_LOAD_RETIRED.L3_HIT (209, 0xd1): Retired load instructions with L3 cache hits as data sources
+- MEM_LOAD_RETIRED.L3_MISS (209, 0xd1): Retired load instructions missed L3 cache as data sources
+- MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 128 cycles.
+- MEM_TRANS_RETIRED.LOAD_LATENCY_GT_16 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 16 cycles.
 - MEM_TRANS_RETIRED.LOAD_LATENCY_GT_256 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 256 cycles.
 - MEM_TRANS_RETIRED.LOAD_LATENCY_GT_32 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 32 cycles.
 - MEM_TRANS_RETIRED.LOAD_LATENCY_GT_4 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 4 cycles.
-- MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 8 cycles.
-- MEM_TRANS_RETIRED.LOAD_LATENCY_GT_16 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 16 cycles.
-- MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 128 cycles.
 - MEM_TRANS_RETIRED.LOAD_LATENCY_GT_512 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 512 cycles.
 - MEM_TRANS_RETIRED.LOAD_LATENCY_GT_64 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 64 cycles.
-- MEM_INST_RETIRED.STLB_MISS_STORES (208, 0xd0): Retired store instructions that miss the STLB.
-- MEM_INST_RETIRED.STLB_MISS_LOADS (208, 0xd0): Retired load instructions that miss the STLB.
-- MEM_INST_RETIRED.SPLIT_STORES (208, 0xd0): Retired store instructions that split across a cacheline boundary.
-- MEM_INST_RETIRED.SPLIT_LOADS (208, 0xd0): Retired load instructions that split across a cacheline boundary.
-- MEM_INST_RETIRED.ALL_STORES (208, 0xd0): All retired store instructions.
-- MEM_INST_RETIRED.LOCK_LOADS (208, 0xd0): Retired load instructions with locked access.
-- MEM_INST_RETIRED.ALL_LOADS (208, 0xd0): All retired load instructions.
-- MEM_LOAD_RETIRED.L2_MISS (209, 0xd1): Retired load instructions missed L2 cache as data sources
-- MEM_LOAD_RETIRED.L3_HIT (209, 0xd1): Retired load instructions with L3 cache hits as data sources
-- MEM_LOAD_RETIRED.FB_HIT (209, 0xd1): Retired load instructions which data sources were load missed L1 but hit FB due to preceding miss to the same cache line with data not ready
-- MEM_LOAD_RETIRED.L2_HIT (209, 0xd1): Retired load instructions with L2 cache hits as data sources
-- MEM_LOAD_RETIRED.L3_MISS (209, 0xd1): Retired load instructions missed L3 cache as data sources
-- MEM_LOAD_RETIRED.L1_HIT (209, 0xd1): Retired load instructions with L1 cache hits as data sources
-- MEM_LOAD_RETIRED.L1_MISS (209, 0xd1): Retired load instructions missed L1 cache as data sources
-- MEM_LOAD_L3_HIT_RETIRED.XSNP_HITM (210, 0xd2): Retired load instructions which data sources were HitM responses from shared L3
-- MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS (210, 0xd2): Retired load instructions which data sources were L3 hit and cross-core snoop missed in on-pkg core cache.
-- MEM_LOAD_L3_HIT_RETIRED.XSNP_HIT (210, 0xd2): Retired load instructions which data sources were L3 and cross-core snoop hits in on-pkg core cache
-- MEM_LOAD_L3_HIT_RETIRED.XSNP_NONE (210, 0xd2): Retired load instructions which data sources were hits in L3 without snoops required
-- BACLEARS.ANY (230, 0xe6): Counts the total number when the front end is resteered, mainly when the BPU cannot provide a correct prediction and this is corrected by other branch handling mechanisms at the front end.
-- L2_TRANS.L2_WB (240, 0xf0): L2 writebacks that access L2 cache
-- L2_LINES_IN.ALL (241, 0xf1): L2 cache lines filling L2
+- MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8 (205, 0xcd): Counts loads when the latency from first dispatch to completion is greater than 8 cycles.
+- OFFCORE_REQUESTS.ALL_DATA_RD (176, 0xb0): Demand and prefetch data reads
+- OFFCORE_REQUESTS.ALL_REQUESTS (176, 0xb0): Any memory transaction that reached the SQ.
+- OFFCORE_REQUESTS.DEMAND_CODE_RD (176, 0xb0): Cacheable and noncachaeble code read requests
+- OFFCORE_REQUESTS.DEMAND_DATA_RD (176, 0xb0): Demand Data Read requests sent to uncore
+- OFFCORE_REQUESTS.DEMAND_RFO (176, 0xb0): Demand RFO requests including regular RFOs, locks, ItoM
+- OFFCORE_REQUESTS.L3_MISS_DEMAND_DATA_RD (176, 0xb0): Demand Data Read requests who miss L3 cache
+- OFFCORE_REQUESTS_BUFFER.SQ_FULL (178, 0xb2): Offcore requests buffer cannot take more entries for this thread core.
+- OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD (96, 0x60): Offcore outstanding cacheable Core Data Read transactions in SuperQueue (SQ), queue to uncore
+- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD (96, 0x60): Cycles when offcore outstanding cacheable Core Data Read transactions are present in SuperQueue (SQ), queue to uncore.
+- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_CODE_RD (96, 0x60): Cycles with offcore outstanding Code Reads transactions in the SuperQueue (SQ), queue to uncore.
+- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD (96, 0x60): Cycles when offcore outstanding Demand Data Read transactions are present in SuperQueue (SQ), queue to uncore
+- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO (96, 0x60): Cycles with offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore.
+- OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_L3_MISS_DEMAND_DATA_RD (96, 0x60): Cycles with at least 1 Demand Data Read requests who miss L3 cache in the superQ
+- OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD (96, 0x60): Offcore outstanding Code Reads transactions in the SuperQueue (SQ), queue to uncore, every cycle. 
+- OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD (96, 0x60): Offcore outstanding Demand Data Read transactions in uncore queue.
+- OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6 (96, 0x60): Cycles with at least 6 offcore outstanding Demand Data Read transactions in uncore queue
+- OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO (96, 0x60): Offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore, every cycle
+- OFFCORE_REQUESTS_OUTSTANDING.L3_MISS_DEMAND_DATA_RD (96, 0x60): Counts number of Offcore outstanding Demand Data Read requests who miss L3 cache in the superQ every cycle.
+- OFFCORE_REQUESTS_OUTSTANDING.L3_MISS_DEMAND_DATA_RD_GE_6 (96, 0x60): Cycles with at least 6 Demand Data Read requests who miss L3 cache in the superQ
+- OFFCORE_RESPONSE (183, 0xb7): Offcore response can be programmed only with a specific pair of event select and counter MSR, and with specific event codes and predefine mask bit value in a dedicated MSR to specify attributes of the offcore transaction
+- OTHER_ASSISTS.ANY (193, 0xc1): Number of times a microcode assist is invoked by HW other than FP-assist. Examples include AD (page Access Dirty) and AVX* related assists.
+- RESOURCE_STALLS.ANY (162, 0xa2): Resource-related stall cycles
+- RESOURCE_STALLS.SB (162, 0xa2): Cycles stalled due to no store buffers available. (not including draining form sync).
+- RS_EVENTS.EMPTY_CYCLES (94, 0x5e): Cycles when Reservation Station (RS) is empty for the thread
+- RS_EVENTS.EMPTY_END (94, 0x5e): Counts end of periods where the Reservation Station (RS) was empty. Could be useful to precisely locate Frontend Latency Bound issues.
+- RTM_RETIRED.ABORTED (201, 0xc9): Number of times an RTM execution aborted due to any reasons (multiple categories may count as one). 
+- RTM_RETIRED.ABORTED_EVENTS (201, 0xc9): Number of times an RTM execution aborted due to none of the previous 4 categories (e.g. interrupt)
+- RTM_RETIRED.ABORTED_MEM (201, 0xc9): Number of times an RTM execution aborted due to various memory events (e.g. read/write capacity and conflicts)
+- RTM_RETIRED.ABORTED_MEMTYPE (201, 0xc9): Number of times an RTM execution aborted due to incompatible memory type
+- RTM_RETIRED.ABORTED_TIMER (201, 0xc9): Number of times an RTM execution aborted due to uncommon conditions.
+- RTM_RETIRED.ABORTED_UNFRIENDLY (201, 0xc9): Number of times an RTM execution aborted due to HLE-unfriendly instructions
+- RTM_RETIRED.COMMIT (201, 0xc9): Number of times an RTM execution successfully committed
+- RTM_RETIRED.START (201, 0xc9): Number of times an RTM execution started.
+- TLB_FLUSH.DTLB_THREAD (189, 0xbd): DTLB flush attempts of the thread-specific entries
+- TLB_FLUSH.STLB_ANY (189, 0xbd): STLB flush attempts
+- TX_EXEC.MISC1 (93, 0x5d): Counts the number of times a class of instructions that may cause a transactional abort was executed. Since this is the count of execution, it may not always cause a transactional abort.
+- TX_EXEC.MISC2 (93, 0x5d): Counts the number of times a class of instructions (e.g., vzeroupper) that may cause a transactional abort was executed inside a transactional region
+- TX_EXEC.MISC3 (93, 0x5d): Counts the number of times an instruction execution caused the transactional nest count supported to be exceeded
+- TX_EXEC.MISC4 (93, 0x5d): Counts the number of times a XBEGIN instruction was executed inside an HLE transactional region.
+- TX_EXEC.MISC5 (93, 0x5d): Counts the number of times an HLE XACQUIRE instruction was executed inside an RTM transactional region
+- TX_MEM.ABORT_CAPACITY (84, 0x54): Number of times a transactional abort was signaled due to a data capacity limitation for transactional reads or writes.
+- TX_MEM.ABORT_CONFLICT (84, 0x54): Number of times a transactional abort was signaled due to a data conflict on a transactionally accessed address
+- TX_MEM.ABORT_HLE_ELISION_BUFFER_MISMATCH (84, 0x54): Number of times an HLE transactional execution aborted due to XRELEASE lock not satisfying the address and value requirements in the elision buffer
+- TX_MEM.ABORT_HLE_ELISION_BUFFER_NOT_EMPTY (84, 0x54): Number of times an HLE transactional execution aborted due to NoAllocatedElisionBuffer being non-zero.
+- TX_MEM.ABORT_HLE_ELISION_BUFFER_UNSUPPORTED_ALIGNMENT (84, 0x54): Number of times an HLE transactional execution aborted due to an unsupported read alignment from the elision buffer.
+- TX_MEM.ABORT_HLE_STORE_TO_ELIDED_LOCK (84, 0x54): Number of times a HLE transactional region aborted due to a non XRELEASE prefixed instruction writing to an elided lock in the elision buffer
+- TX_MEM.HLE_ELISION_BUFFER_FULL (84, 0x54): Number of times HLE lock could not be elided due to ElisionBufferAvailable being zero.
+- UOPS_DISPATCHED_PORT.PORT_0 (161, 0xa1): Cycles per thread when uops are executed in port 0
+- UOPS_DISPATCHED_PORT.PORT_1 (161, 0xa1): Cycles per thread when uops are executed in port 1
+- UOPS_DISPATCHED_PORT.PORT_2 (161, 0xa1): Cycles per thread when uops are executed in port 2
+- UOPS_DISPATCHED_PORT.PORT_3 (161, 0xa1): Cycles per thread when uops are executed in port 3
+- UOPS_DISPATCHED_PORT.PORT_4 (161, 0xa1): Cycles per thread when uops are executed in port 4
+- UOPS_DISPATCHED_PORT.PORT_5 (161, 0xa1): Cycles per thread when uops are executed in port 5
+- UOPS_DISPATCHED_PORT.PORT_6 (161, 0xa1): Cycles per thread when uops are executed in port 6
+- UOPS_DISPATCHED_PORT.PORT_7 (161, 0xa1): Cycles per thread when uops are executed in port 7
+- UOPS_EXECUTED.CORE (177, 0xb1): Number of uops executed on the core.
+- UOPS_EXECUTED.CORE_CYCLES_GE_1 (177, 0xb1): Cycles at least 1 micro-op is executed from any thread on physical core
+- UOPS_EXECUTED.CORE_CYCLES_GE_2 (177, 0xb1): Cycles at least 2 micro-op is executed from any thread on physical core
+- UOPS_EXECUTED.CORE_CYCLES_GE_3 (177, 0xb1): Cycles at least 3 micro-op is executed from any thread on physical core
+- UOPS_EXECUTED.CORE_CYCLES_GE_4 (177, 0xb1): Cycles at least 4 micro-op is executed from any thread on physical core
+- UOPS_EXECUTED.CORE_CYCLES_NONE (177, 0xb1): Cycles with no micro-ops executed from any thread on physical core
+- UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC (177, 0xb1): Cycles where at least 1 uop was executed per-thread
+- UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC (177, 0xb1): Cycles where at least 2 uops were executed per-thread
+- UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC (177, 0xb1): Cycles where at least 3 uops were executed per-thread
+- UOPS_EXECUTED.CYCLES_GE_4_UOPS_EXEC (177, 0xb1): Cycles where at least 4 uops were executed per-thread
+- UOPS_EXECUTED.STALL_CYCLES (177, 0xb1): Counts number of cycles no uops were dispatched to be executed on this thread.
+- UOPS_EXECUTED.THREAD (177, 0xb1): Counts the number of uops to be executed per-thread each cycle.
+- UOPS_EXECUTED.X87 (177, 0xb1): Counts the number of x87 uops dispatched.
+- UOPS_ISSUED.ANY (14, 0xe): Uops that Resource Allocation Table (RAT) issues to Reservation Station (RS)
+- UOPS_ISSUED.SLOW_LEA (14, 0xe): Number of slow LEA uops being allocated. A uop is generally considered SlowLea if it has 3 sources (e.g. 2 sources + immediate) regardless if as a result of LEA instruction or not.
+- UOPS_ISSUED.STALL_CYCLES (14, 0xe): Cycles when Resource Allocation Table (RAT) does not issue Uops to Reservation Station (RS) for the thread
+- UOPS_ISSUED.VECTOR_WIDTH_MISMATCH (14, 0xe): Uops inserted at issue-stage in order to preserve upper bits of vector registers.
+- UOPS_RETIRED.RETIRE_SLOTS (194, 0xc2): Retirement slots used.
+- UOPS_RETIRED.STALL_CYCLES (194, 0xc2): Cycles without actually retired uops.
+- UOPS_RETIRED.TOTAL_CYCLES (194, 0xc2): Cycles with less than 10 actually retired uops.

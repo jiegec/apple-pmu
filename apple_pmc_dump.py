@@ -21,6 +21,6 @@ for file in glob.glob('/usr/share/kpep/*.plist'):
 
 	print('', file=out)
 	print('Performance counters:', file=out)
-	res = sorted(res, key=lambda x:x[1])
+	res = sorted(res, key=lambda x:x[0])
 	for key, id, desc in res:
 		print(f'- {key} ({id}, 0x{id:x}): {desc}', file=out)
