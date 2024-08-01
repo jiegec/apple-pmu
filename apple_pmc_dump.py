@@ -4,6 +4,16 @@ import glob
 import os
 
 for file in glob.glob('/usr/share/kpep/*.plist'):
+	basename = os.path.basename(file)
+	basename = basename.removesuffix('.plist')
+	if os.path.islink(file):
+		target = os.readlink(file)
+		src = basename + '.md'
+		if os.path.exists(src):
+			os.unlink(src)
+		os.symlink(os.path.basename(target).removesuffix('.plist') + '.md', src)
+		continue
+
 	res = []
 	with open(file, 'rb') as f:
 		data = plistlib.load(f)
@@ -12,8 +22,6 @@ for file in glob.glob('/usr/share/kpep/*.plist'):
 			if 'number' in value:
 				res.append((key, value['number'], value['description']))
 
-	basename = os.path.basename(file)
-	basename = basename.removesuffix('.plist')
 	out = open(f'{basename}.md', 'w')
 
 	marketing_name = data['system']['cpu']['marketing_name']
