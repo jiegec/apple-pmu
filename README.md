@@ -1,10 +1,10 @@
 # apple-pmu
 
-Dump Apple PMU counter definitions from `/usr/share/kpep` in macOS.
+Dump Apple PMU counter definitions from `/usr/share/kpep` in macOS. Also in `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/*/DeveloperDiskImage.dmg`
 
 Also see [cyyself/m1-pmu-gen](https://github.com/cyyself/m1-pmu-gen) to see how to integrate the counters into perf.
 
-See also: https://gist.github.com/ibireme/173517c208c7dc333ba962c1f0d67d12, https://github.com/Tencent/ncnn/blob/master/src/cpu.cpp https://github.com/Homebrew/brew/blob/master/Library/Homebrew/extend/os/mac/hardware/cpu.rb
+See also: https://gist.github.com/ibireme/173517c208c7dc333ba962c1f0d67d12, https://github.com/Tencent/ncnn/blob/master/src/cpu.cpp https://github.com/Homebrew/brew/blob/master/Library/Homebrew/extend/os/mac/hardware/cpu.rb https://en.wikipedia.org/wiki/List_of_Apple_codenames
 
 Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 
@@ -15,3 +15,4 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 5. M3 (Ibiza): 100000c_2_fa33415e -> as1.md
 6. M3 Pro (Lobos): 100000c_2_5f4dea93 -> as3.md
 7. M3 Max (Palma): 100000c_2_72015832 -> as3.md
+8. M4 (Donan): 100000c_2_6f5129ac -> as4.md
