@@ -22,10 +22,11 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - A17 Pro (H15 Coll): 100000c_2_2876f5b5 -> as2.md
 - M3 Pro (H15 Lobos): 100000c_2_5f4dea93 -> as3.md
 - M3 Max (H15 Palma): 100000c_2_72015832 -> as3.md
-- M4 (H16G Donan): 100000c_2_6f5129ac -> as4.md
+- M4 (H16G/H16H Donan): 100000c_2_6f5129ac -> as4.md
+- M4 Pro (H16S/H16C Brava): cpu_100000c_2_17d5b93a -> as4-1.md
 - A18 (H17A Tupai): 100000c_2_204526d0
 - A18 Pro (H17P Tahiti): 100000c_2_75d4acb9
 
 From PMU:
 
-a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4
+a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1
