@@ -12,20 +12,20 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - A8 Typhoon: cpu_100000c_1_2c91a47e.md -> a8.md
 - A9 Twister: cpu_100000c_1_92fb37c8.md -> a9.md
 - A10 Hurricane: cpu_100000c_1_67ceee93.md -> a10.md
-- A11(H10) Monsoon+Mistral: 100000c_1_e81e7ef6.md -> a11.md
-- A12(H11) Vortex+Tempest: cpu_100000c_2_7d34b9f -> a12.md
-- A13(H12) Lightning+Thunder: 100000c_2_462504d2 -> a13.md
-- A14/M1(H13) Firestorm+Icestorm: 100000c_2_1b588bb3 -> a14.md
-- A15/M2(H14) Avalanche+Blizzard: 100000c_2_da33d83d -> a15.md
-- A16(H15) Everest+Sawtooth: 100000c_2_8765edea -> a16.md
-- M3 (H15 Ibiza): 100000c_2_fa33415e -> as1.md
-- A17 Pro (H15 Coll): 100000c_2_2876f5b5 -> as2.md
-- M3 Pro (H15 Lobos): 100000c_2_5f4dea93 -> as3.md
-- M3 Max (H15 Palma): 100000c_2_72015832 -> as3.md
-- M4 (H16G/H16H Donan): 100000c_2_6f5129ac -> as4.md
-- M4 Pro (H16S/H16C Brava): cpu_100000c_2_17d5b93a -> as4-1.md
-- A18 (H17A Tupai): 100000c_2_204526d0 -> as4-2.md
-- A18 Pro (H17P Tahiti): 100000c_2_75d4acb9 -> as4-2.md
+- A11(H10) Monsoon+Mistral: cpu_100000c_1_e81e7ef6.md -> a11.md
+- A12(H11) Vortex+Tempest: cpu_100000c_2_7d34b9f.md -> a12.md
+- A13(H12) Lightning+Thunder: cpu_100000c_2_462504d2.md -> a13.md
+- A14/M1(H13) Firestorm+Icestorm: cpu_100000c_2_1b588bb3.md -> a14.md
+- A15/M2(H14) Avalanche+Blizzard: cpu_100000c_2_da33d83d.md -> a15.md
+- A16(H15) Everest+Sawtooth: cpu_100000c_2_8765edea.md -> a16.md
+- M3 (H15 Ibiza): cpu_100000c_2_fa33415e.md -> as1.md
+- A17 Pro (H15 Coll): cpu_100000c_2_2876f5b5.md -> as2.md
+- M3 Pro (H15 Lobos): cpu_100000c_2_5f4dea93.md -> as3.md
+- M3 Max (H15 Palma): cpu_100000c_2_72015832.md -> as3.md
+- M4 (H16G/H16H Donan): cpu_100000c_2_6f5129ac.md -> as4.md
+- M4 Pro (H16S/H16C Brava): cpu_100000c_2_17d5b93a.md -> as4-1.md
+- A18 (H17A Tupai): cpu_100000c_2_204526d0.md -> as4-2.md
+- A18 Pro (H17P Tahiti): cpu_100000c_2_75d4acb9.md -> as4-2.md
 
 From PMU:
 
