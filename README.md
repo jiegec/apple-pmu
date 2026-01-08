@@ -31,11 +31,6 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - A19 (H18A Tilos): 01d7a72b
 - A19 Pro (H18P Thera): ab345f09
 
-New models to be determined:
-
-- H18P Thera: cpu_100000c_2_ab34f509.md
-- H18P Tilos: cpu_100000c_2_01d7a72b.md
-
 From PMU:
 
 a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2 = as5
