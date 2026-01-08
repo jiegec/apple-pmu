@@ -28,9 +28,9 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - A18 (H17A Tupai): cpu_100000c_2_204526d0.md -> as4-2.md
 - A18 Pro (H17P Tahiti): cpu_100000c_2_75d4acb9.md -> as4-2.md
 - M5 (H17G Hidra): cpu_100000c_2_1d5a87e8.md -> as5.md
-- A19 (H18A Tilos): 01d7a72b
-- A19 Pro (H18P Thera): ab345f09
+- A19 (H18A Tilos): cpu_100000c_2_1d7a72b.md -> as5-2.md
+- A19 Pro (H18P Thera): cpu_100000c_2_ab345f09.md -> as5-2.md
 
 From PMU:
 
-a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2 = as5
+a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2 = as5 = as5-2
