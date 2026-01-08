@@ -38,4 +38,4 @@ New models to be determined:
 
 From PMU:
 
-a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2
+a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2 = as5
