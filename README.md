@@ -27,7 +27,7 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - M4 Max (H16C Brava): cpu_100000c_2_17d5b93a.md -> as4-1.md
 - A18 (H17A Tupai): cpu_100000c_2_204526d0.md -> as4-2.md
 - A18 Pro (H17P Tahiti): cpu_100000c_2_75d4acb9.md -> as4-2.md
-- M5 (H17G Hidra): 1d5a87e8
+- M5 (H17G Hidra): cpu_100000c_2_1d5a87e8.md -> as5.md
 - A19 (H18A Tilos): 01d7a72b
 - A19 Pro (H18P Thera): ab345f09
 
