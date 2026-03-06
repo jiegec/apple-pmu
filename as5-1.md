@@ -1,0 +1,104 @@
+Marketing name: Apple silicon
+
+Performance counters:
+- ARM_BR_MIS_PRED (16, 0x10): Mispredicted or not predicted branch Speculatively executed
+- ARM_BR_PRED (18, 0x12): Predictable branch Speculatively executed
+- ARM_L1D_CACHE (4, 0x4): Level 1 data cache access
+- ARM_L1D_CACHE_LMISS_RD (57, 0x39): Level 1 data cache long-latency read miss
+- ARM_L1D_CACHE_RD (64, 0x40): Attributable Level 1 data cache access, read
+- ARM_L1D_CACHE_REFILL (3, 0x3): Level 1 data cache refill
+- ARM_STALL (60, 0x3c): No operation sent for execution
+- ARM_STALL_BACKEND (36, 0x24): No operation issued due to the backend
+- ARM_STALL_FRONTEND (35, 0x23): No operation issued due to the frontend
+- ARM_STALL_SLOT (63, 0x3f): No operation sent for execution on a slot
+- ARM_STALL_SLOT_BACKEND (61, 0x3d): No operation sent for execution on a Slot due to the backend
+- ARM_STALL_SLOT_FRONTEND (62, 0x3e): No operation sent for execution on a Slot due to the frontend
+- ATOMIC_OR_EXCLUSIVE_FAIL (1460, 0x5b4): Atomic or exclusive instruction failed due to contention (for exclusives, incorrectly undercounts for exclusives when the cache line is initially found in shared state, however counts correctly for atomics)
+- ATOMIC_OR_EXCLUSIVE_SUCC (1459, 0x5b3): Atomic or exclusive instruction successfully completed (for exclusives, incorrectly undercounts for exclusives when the cache line is initially found in shared state, however counts correctly for atomics)
+- BRANCH_CALL_INDIR_MISPRED_NONSPEC (2250, 0x8ca): Retired indirect call instructions mispredicted
+- BRANCH_COND_MISPRED_NONSPEC (2245, 0x8c5): Retired conditional branch instructions that mispredicted
+- BRANCH_INDIR_MISPRED_NONSPEC (2246, 0x8c6): Retired indirect branch instructions including calls and returns that mispredicted
+- BRANCH_MISPRED_NONSPEC (34, 0x22): Instruction architecturally executed, mispredicted branch
+- BRANCH_RET_INDIR_MISPRED_NONSPEC (2248, 0x8c8): Retired return instructions that mispredicted
+- CORE_ACTIVE_CYCLE (17, 0x11): Cycles while the core was active
+- FETCH_RESTART (478, 0x1de): Fetch Unit internal restarts for any reason. Does not include branch mispredicts
+- FLUSH_RESTART_OTHER_NONSPEC (2180, 0x884): Pipeline flush and restarts that were not due to branch mispredictions or memory order violations
+- INST_ALL (8, 0x8): All retired instructions
+- INST_BARRIER (2204, 0x89c): Retired data barrier instructions
+- INST_BRANCH (33, 0x21): Retired branch instructions including calls and returns
+- INST_BRANCH_CALL (2190, 0x88e): Retired subroutine call instructions
+- INST_BRANCH_COND (2196, 0x894): Retired conditional branch instructions (on M3 and prior, incorrectly only counts only B.cond instructions, where on M4 and following, adds CBZ/CBNZ/TBZ/TBNZ instructions to form the complete set of conditional branch instructions)
+- INST_BRANCH_INDIR (2195, 0x893): Retired indirect branch instructions including indirect calls
+- INST_BRANCH_RET (2191, 0x88f): Retired subroutine return instructions
+- INST_BRANCH_TAKEN (2192, 0x890): Retired taken branch instructions
+- INST_INT_ALU (2199, 0x897): Retired non-branch and non-load/store Integer Unit instructions
+- INST_INT_LD (2197, 0x895): Retired load Integer Unit instructions
+- INST_INT_ST (2198, 0x896): Retired store Integer Unit instructions; does not count DC ZVA (Data Cache Zero by VA)
+- INST_LDST (2203, 0x89b): Retired load and store instructions; does not count DC ZVA (Data Cache Zero by VA)
+- INST_SIMD_ALU (2202, 0x89a): Retired non-load/store Advanced SIMD and FP Unit instructions
+- INST_SIMD_ALU_VEC (2207, 0x89f): Retired non-load/store vector Advanced SIMD  instructions
+- INST_SIMD_LD (2200, 0x898): Retired load Advanced SIMD and FP Unit instructions
+- INST_SIMD_ST (2201, 0x899): Retired store Advanced SIMD and FP Unit instructions
+- INST_SME_ENGINE_ALU (2211, 0x8a3): Retired non-load/store SME engine instructions
+- INST_SME_ENGINE_LD (2209, 0x8a1): Retired load SME engine instructions
+- INST_SME_ENGINE_PACKING_FUSED (1321, 0x529): Retired non-load/store SME engine instructions that were packed with another to reduce instruction bandwidth to the SME engine
+- INST_SME_ENGINE_SCALARFP (2208, 0x8a0): Retired scalar floating-point SME engine instructions
+- INST_SME_ENGINE_ST (2210, 0x8a2): Retired store SME engine instructions
+- INTERRUPT_PENDING (620, 0x26c): Cycles while an interrupt was pending because it was masked
+- L1D_CACHE_MISS_LD (1443, 0x5a3): Loads that missed the L1 Data Cache
+- L1D_CACHE_MISS_LD_NONSPEC (2239, 0x8bf): Retired loads that missed in the L1 Data Cache
+- L1D_CACHE_MISS_ST (1442, 0x5a2): Stores that missed the L1 Data Cache
+- L1D_CACHE_MISS_ST_NONSPEC (2240, 0x8c0): Retired stores that missed in the L1 Data Cache
+- L1D_CACHE_WRITEBACK (1448, 0x5a8): Dirty cache lines written back from the L1D Cache toward the Shared L2 Cache
+- L1D_TLB_ACCESS (1440, 0x5a0): Load and store accesses to the L1 Data TLB
+- L1D_TLB_FILL (1029, 0x405): Translations filled into the L1 Data TLB
+- L1D_TLB_MISS (1441, 0x5a1): Load and store accesses that missed the L1 Data TLB
+- L1D_TLB_MISS_NONSPEC (2241, 0x8c1): Retired loads and stores that missed in the L1 Data TLB
+- L1I_CACHE_MISS_DEMAND (16390, 0x4006): Demand fetch misses that require a new cache line fill of the L1 Instruction Cache
+- L1I_TLB_FILL (1028, 0x404): Translations filled into the L1 Instruction TLB
+- L1I_TLB_MISS_DEMAND (468, 0x1d4): Demand instruction fetches that missed in the L1 Instruction TLB
+- L2_TLB_MISS_DATA (1035, 0x40b): Loads and stores that missed in the L2 TLB
+- L2_TLB_MISS_INSTRUCTION (1034, 0x40a): Instruction fetches that missed in the L2 TLB
+- LDST_SME_PRED_INACTIVE (1399, 0x577): SME engine load and store uops where all lanes are inactive due to the governing predicate; for a page-crossing load or store, the event may incorrectly count when all of the elements of the low page are predicated off, even if some of the elements on the high page are active. In Apple silicon cores, where predication is recommend primarily for data structure edge control (discarding elements 'past the end of the data structure'), this scenario should not be common.
+- LDST_SME_XPG_UOP (1288, 0x508): SME engine load and store accesses that crossed a 16KiB page boundary; an access is considered cross-page if any bytes are accessed in the high portion (second page), regardless if any bytes are accessed in the low portion (first page), after predication is applied. An SME operation that only touches the low portion (first page) after predication is applied is not considered cross-page.
+- LDST_UNIT_OLD_L1D_CACHE_MISS (656, 0x290): Cycles while an old load or store uop is waiting for data after an L1 Data Cache miss
+- LDST_UNIT_WAITING_OLD_L1D_CACHE_MISS (657, 0x291): Cycles while an old load or store uop is waiting for data after an L1 Data Cache miss, and no uop was issued by the scheduler, prioritized
+- LDST_UNIT_WAITING_SME_ENGINE_INST_QUEUE_FULL (652, 0x28c): Cycles while the instruction queue to the SME engine is full, and no uop was issued by the scheduler with no critical miss, prioritized
+- LDST_UNIT_WAITING_SME_ENGINE_MEM_DATA (655, 0x28f): Cycles while the core is waiting for the SME engine to produce memory data, and no uop was issued by the scheduler, prioritized
+- LDST_X64_UOP (1457, 0x5b1): Load and store uops that crossed a 64B boundary
+- LDST_XPG_UOP (1458, 0x5b2): Load and store uops that crossed a 16KiB page boundary; an SME access is considered cross-page if any bytes are accessed in the high portion (second page), regardless if any bytes are accessed in the low portion (first page), after predication is applied. An SME operation that only touches the low portion (first page) after predication is applied is not considered cross-page.
+- LD_BLOCKED_BY_SME_LDST (1324, 0x52c): Core load uops blocked by SME accesses to same 4KiB page
+- LD_NT_UOP (1510, 0x5e6): Load uops that executed with non-temporal hint; excludes SSVE/SME loads because they utilize the Store Unit
+- LD_SME_NORMAL_UOP (1397, 0x575): SME engine load uops with Normal memory type
+- LD_SME_NT_UOP (1395, 0x573): SME engine load uops that executed with non-temporal hint
+- LD_UNIT_UOP (1446, 0x5a6): Uops that flowed through the Load Unit
+- LD_UNIT_WAITING_YOUNG_L1D_CACHE_MISS (660, 0x294): Cycles while a younger load uop is waiting for data after an L1 Data Cache miss, and no uop was issued by the scheduler with no critical miss, prioritized
+- MAP_DISPATCH_BUBBLE (470, 0x1d6): Cycles while the Map Unit had no uops to process and was not stalled
+- MAP_DISPATCH_BUBBLE_IC (386, 0x182): Cycles while the Map Unit had no uops to process due to L1 Instruction Cache and was not stalled
+- MAP_DISPATCH_BUBBLE_ITLB (387, 0x183): Cycles while the Map Unit had no uops to process due to L1 Instruction TLB and was not stalled
+- MAP_DISPATCH_BUBBLE_SLOT (481, 0x1e1): Slots where the Map Unit had no uops to process and was not stalled
+- MAP_INT_SME_UOP (645, 0x285): Mapped core Integer Unit uops for SME engine instructions
+- MAP_INT_UOP (636, 0x27c): Mapped Integer Unit uops
+- MAP_LDST_UOP (637, 0x27d): Mapped Load and Store Unit uops, including GPR to vector register converts; includes all instructions sent to the SME engine because they are processed through the Store Unit
+- MAP_RECOVERY (685, 0x2ad): Cycles while the Map Unit was stalled while recovering from a flush and restart
+- MAP_REWIND (629, 0x275): Cycles while the Map Unit was blocked while rewinding due to flush and restart
+- MAP_SIMD_UOP (638, 0x27e): Mapped Advanced SIMD and FP Unit uops
+- MAP_STALL (630, 0x276): Cycles while the Map Unit was stalled for any reason
+- MAP_STALL_DISPATCH (624, 0x270): Cycles while the Map Unit was stalled because of Dispatch back pressure
+- MAP_STALL_NONRECOVERY (686, 0x2ae): Cycles while the Map Unit was stalled for any reason other than recovery
+- MAP_UOP (59, 0x3b): Mapped uops
+- MMU_TABLE_WALK_DATA (1032, 0x408): Table walk memory requests on behalf of data accesses
+- MMU_TABLE_WALK_INSTRUCTION (1031, 0x407): Table walk memory requests on behalf of instruction fetches
+- RETIRE_UOP (58, 0x3a): All retired uops
+- SCHEDULE_EMPTY (849, 0x351): Cycles while the uop scheduler is empty
+- SCHEDULE_UOP_ANY (643, 0x283): Cycles while the uop scheduler issued at least 1 uop to any execution unit
+- SCHEDULE_WAITING_SME_ENGINE_REG_DATA (654, 0x28e): Cycles while the core is waiting for register, predicate, or flag data from the SME engine, and no uop was issued by the scheduler with no critical miss, prioritized
+- SME_ENGINE_SM_ENABLE (646, 0x286): Transitions into SME engine Streaming Mode (PSTATE.SM: 0 to 1)
+- SME_ENGINE_SM_ZA_ENABLE (647, 0x287): Simultaneous transitions into SME engine Streaming Mode and ZA Mode (PSTATE.SM: 0 to 1 and PSTATE.ZA: 0 to 1)
+- SME_ENGINE_ZA_ENABLED_SM_DISABLED (648, 0x288): Cycles while SME engine ZA Mode is enabled but Streaming Mode is not (PSTATE.ZA=1 and PSTATE.SM=0)
+- ST_BARRIER_BLOCKED_BY_SME_LDST (1326, 0x52e): Core store uops blocked by SME accesses to same 4KiB page, and any barriers or store-release uops blocked by SME accesses
+- ST_MEM_ORDER_VIOL_LD_NONSPEC (2244, 0x8c4): Retired core store uops that triggered memory order violations with core load uops
+- ST_NT_UOP (1509, 0x5e5): Store uops that executed with non-temporal hint; includes SSVE/SME loads because they utilize the Store Unit
+- ST_SME_NORMAL_UOP (1398, 0x576): SME engine store uops with Normal memory type
+- ST_SME_NT_UOP (1396, 0x574): SME engine store uops that executed with non-temporal hint
+- ST_UNIT_UOP (1447, 0x5a7): Uops that flowed through the Store Unit
