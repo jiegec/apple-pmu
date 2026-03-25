@@ -4,8 +4,6 @@ Dump Apple PMU counter definitions from `/usr/share/kpep` in macOS. Also in `/Ap
 
 Also see [cyyself/m1-pmu-gen](https://github.com/cyyself/m1-pmu-gen) to see how to integrate the counters into perf.
 
-See also: https://gist.github.com/ibireme/173517c208c7dc333ba962c1f0d67d12, https://github.com/Tencent/ncnn/blob/master/src/cpu.cpp https://github.com/Homebrew/brew/blob/master/Library/Homebrew/extend/os/mac/hardware/cpu.rb https://en.wikipedia.org/wiki/List_of_Apple_codenames https://github.com/xybp888/iOS-SDKs/blob/d7f1be9f5b79cffcfb547bbd930f92ec0fc35038/iPhoneOS17.5.sdk/usr/include/mach/machine.h#L365 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/machine.h /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine.h /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/arm/cpuid.h
-
 Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 
 - A7 Cyclone: cpu_100000c_1_37a09642.md -> a7.md
@@ -36,3 +34,16 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 From PMU:
 
 a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2 -> as5 = as5-1 = as5-2
+
+See also: 
+
+- https://gist.github.com/ibireme/173517c208c7dc333ba962c1f0d67d12
+- https://github.com/Tencent/ncnn/blob/master/src/cpu.cpp
+- https://github.com/Homebrew/brew/blob/master/Library/Homebrew/extend/os/mac/hardware/cpu.rb
+- https://en.wikipedia.org/wiki/List_of_Apple_codenames
+- https://github.com/xybp888/iOS-SDKs/blob/d7f1be9f5b79cffcfb547bbd930f92ec0fc35038/iPhoneOS17.5.sdk/usr/include/mach/machine.h#L365
+- /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/machine.h
+- /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine.h
+- /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/arm/cpuid.h
+- https://asahilinux.org/docs/hw/soc/soc-codenames/
+
