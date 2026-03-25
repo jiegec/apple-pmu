@@ -7,6 +7,13 @@ Performance counters:
 - ARM_L1D_CACHE_LMISS_RD (57, 0x39): Level 1 data cache long-latency read miss
 - ARM_L1D_CACHE_RD (64, 0x40): Attributable Level 1 data cache access, read
 - ARM_L1D_CACHE_REFILL (3, 0x3): Level 1 data cache refill
+- ARM_L1I_CACHE (20, 0x14): Counts each Instruction memory access to at least the Level 1 instruction or unified cache
+- ARM_MEM_ACCESS (19, 0x13): Data memory access
+- ARM_MEM_ACCESS_CHECKED (16420, 0x4024): Checked data memory access
+- ARM_MEM_ACCESS_CHECKED_RD (16421, 0x4025): Checked data memory access, read
+- ARM_MEM_ACCESS_CHECKED_WR (16422, 0x4026): Checked data memory access, write
+- ARM_MEM_ACCESS_RD (102, 0x66): Data memory access, read
+- ARM_MEM_ACCESS_WR (103, 0x67): Data memory access, write
 - ARM_STALL (60, 0x3c): No operation sent for execution
 - ARM_STALL_BACKEND (36, 0x24): No operation issued due to the backend
 - ARM_STALL_FRONTEND (35, 0x23): No operation issued due to the frontend
@@ -15,18 +22,22 @@ Performance counters:
 - ARM_STALL_SLOT_FRONTEND (62, 0x3e): No operation sent for execution on a Slot due to the frontend
 - ATOMIC_OR_EXCLUSIVE_FAIL (1460, 0x5b4): Atomic or exclusive instruction failed due to contention (for exclusives, incorrectly undercounts for exclusives when the cache line is initially found in shared state, however counts correctly for atomics)
 - ATOMIC_OR_EXCLUSIVE_SUCC (1459, 0x5b3): Atomic or exclusive instruction successfully completed (for exclusives, incorrectly undercounts for exclusives when the cache line is initially found in shared state, however counts correctly for atomics)
+- BRANCH_BR_INDIR_MISPRED_NONSPEC (2247, 0x8c7): Retired indirect branch instructions, excluding call and return instructions, that mispredicted.
 - BRANCH_CALL_INDIR_MISPRED_NONSPEC (2250, 0x8ca): Retired indirect call instructions mispredicted
 - BRANCH_COND_MISPRED_NONSPEC (2245, 0x8c5): Retired conditional branch instructions that mispredicted
 - BRANCH_INDIR_MISPRED_NONSPEC (2246, 0x8c6): Retired indirect branch instructions including calls and returns that mispredicted
 - BRANCH_MISPRED_NONSPEC (34, 0x22): Instruction architecturally executed, mispredicted branch
 - BRANCH_RET_INDIR_MISPRED_NONSPEC (2248, 0x8c8): Retired return instructions that mispredicted
 - CORE_ACTIVE_CYCLE (17, 0x11): Cycles while the core was active
+- CORE_WAITING_SME_ENGINE_CYCLE (661, 0x295): Cycles while the core was waiting to push instructions to the SME engine or the core was waiting for data from the SME engine, and no uop was issued by the scheduler, prioritized
+- DECODE_UOP (390, 0x186): Decoded uops
 - FETCH_RESTART (478, 0x1de): Fetch Unit internal restarts for any reason. Does not include branch mispredicts
 - FLUSH_RESTART_OTHER_NONSPEC (2180, 0x884): Pipeline flush and restarts that were not due to branch mispredictions or memory order violations
 - INST_ALL (8, 0x8): All retired instructions
 - INST_BARRIER (2204, 0x89c): Retired data barrier instructions
 - INST_BRANCH (33, 0x21): Retired branch instructions including calls and returns
 - INST_BRANCH_CALL (2190, 0x88e): Retired subroutine call instructions
+- INST_BRANCH_CALL_INDIR (2193, 0x891): Retired indirect subroutine call instructions; subset of INST_BRANCH_CALL
 - INST_BRANCH_COND (2196, 0x894): Retired conditional branch instructions (on M3 and prior, incorrectly only counts only B.cond instructions, where on M4 and following, adds CBZ/CBNZ/TBZ/TBNZ instructions to form the complete set of conditional branch instructions)
 - INST_BRANCH_INDIR (2195, 0x893): Retired indirect branch instructions including indirect calls
 - INST_BRANCH_RET (2191, 0x88f): Retired subroutine return instructions
@@ -35,6 +46,7 @@ Performance counters:
 - INST_INT_LD (2197, 0x895): Retired load Integer Unit instructions
 - INST_INT_ST (2198, 0x896): Retired store Integer Unit instructions; does not count DC ZVA (Data Cache Zero by VA)
 - INST_LDST (2203, 0x89b): Retired load and store instructions; does not count DC ZVA (Data Cache Zero by VA)
+- INST_MICROCODED (2212, 0x8a4): Retired instructions that require internal microcode.
 - INST_SIMD_ALU (2202, 0x89a): Retired non-load/store Advanced SIMD and FP Unit instructions
 - INST_SIMD_ALU_VEC (2207, 0x89f): Retired non-load/store vector Advanced SIMD  instructions
 - INST_SIMD_LD (2200, 0x898): Retired load Advanced SIMD and FP Unit instructions
@@ -59,6 +71,8 @@ Performance counters:
 - L1I_TLB_MISS_DEMAND (468, 0x1d4): Demand instruction fetches that missed in the L1 Instruction TLB
 - L2_TLB_MISS_DATA (1035, 0x40b): Loads and stores that missed in the L2 TLB
 - L2_TLB_MISS_INSTRUCTION (1034, 0x40a): Instruction fetches that missed in the L2 TLB
+- LDST_MEM_ACCESS_CHECKED_X2K (1408, 0x580): Read or write allocation tag checked data memory accesses that required tags from 2 different 64B cache lines of tags
+- LDST_OLDEST_MTE_TAG_CHECK_CYCLE (669, 0x29d): Cycles while an old load or store uop is waiting for its MTE tag check, and no uop was issued by the scheduler, prioritized
 - LDST_SME_PRED_INACTIVE (1399, 0x577): SME engine load and store uops where all lanes are inactive due to the governing predicate; for a page-crossing load or store, the event may incorrectly count when all of the elements of the low page are predicated off, even if some of the elements on the high page are active. In Apple silicon cores, where predication is recommend primarily for data structure edge control (discarding elements 'past the end of the data structure'), this scenario should not be common.
 - LDST_SME_XPG_UOP (1288, 0x508): SME engine load and store accesses that crossed a 16KiB page boundary; an access is considered cross-page if any bytes are accessed in the high portion (second page), regardless if any bytes are accessed in the low portion (first page), after predication is applied. An SME operation that only touches the low portion (first page) after predication is applied is not considered cross-page.
 - LDST_UNIT_OLD_L1D_CACHE_MISS (656, 0x290): Cycles while an old load or store uop is waiting for data after an L1 Data Cache miss
@@ -71,12 +85,21 @@ Performance counters:
 - LD_NT_UOP (1510, 0x5e6): Load uops that executed with non-temporal hint; excludes SSVE/SME loads because they utilize the Store Unit
 - LD_SME_NORMAL_UOP (1397, 0x575): SME engine load uops with Normal memory type
 - LD_SME_NT_UOP (1395, 0x573): SME engine load uops that executed with non-temporal hint
+- LD_SRC_CORE_SAMECLUSTER_NONSPEC (2226, 0x8b2): Retired load instructions where the data is supplied by another core in the same cluster.  See Apple Silicon CPU Optimization Guide.
+- LD_SRC_LL_CACHE_NONSPEC (2225, 0x8b1): Retired load instructions where the data is supplied by the core's Shared L2 Cache.  See Apple Silicon CPU Optimization Guide.
+- LD_SRC_MEMSYS_NONSPEC (2233, 0x8b9): Retired load instructions where the data is supplied by either the Memory Cache or the DRAM.  See Apple Silicon CPU Optimization Guide.
+- LD_SRC_MEMSYS_OTHERDIE_NONSPEC (2234, 0x8ba): Retired load instructions where the data is supplied by either the Memory Cache or the DRAM on another die.  Subset of LD_SRC_MEMSYS_NONSPEC.  See Apple Silicon CPU Optimization Guide.
+- LD_SRC_OTHERCLUSTER_NONSPEC (2227, 0x8b3): Retired load instructions where the data is supplied by an agent in another cluster.  See Apple Silicon CPU Optimization Guide.
+- LD_SRC_OTHERCLUSTER_OTHERDIE_NONSPEC (2228, 0x8b4): Retired load instructions where the data is supplied by an agent in another cluster on another die.  Subset of LD_SRC_OTHERCLUSTER_NONSPEC. See Apple Silicon CPU Optimization Guide.
+- LD_SRC_PL2_CACHE_NONSPEC (2224, 0x8b0): Retired load instructions where the data is supplied by the core's PL2.  The PL2 is only available on some cores.  See Apple Silicon CPU Optimization Guide.
+- LD_SRC_STORE_NONSPEC (2223, 0x8af): Retired load instructions where the data is at least partially supplied by older stores that have yet to write into the L1 Cache.  See Apple Silicon CPU Optimization Guide.
 - LD_UNIT_UOP (1446, 0x5a6): Uops that flowed through the Load Unit
 - LD_UNIT_WAITING_YOUNG_L1D_CACHE_MISS (660, 0x294): Cycles while a younger load uop is waiting for data after an L1 Data Cache miss, and no uop was issued by the scheduler with no critical miss, prioritized
 - MAP_DISPATCH_BUBBLE (470, 0x1d6): Cycles while the Map Unit had no uops to process and was not stalled
 - MAP_DISPATCH_BUBBLE_IC (386, 0x182): Cycles while the Map Unit had no uops to process due to L1 Instruction Cache and was not stalled
 - MAP_DISPATCH_BUBBLE_ITLB (387, 0x183): Cycles while the Map Unit had no uops to process due to L1 Instruction TLB and was not stalled
 - MAP_DISPATCH_BUBBLE_SLOT (481, 0x1e1): Slots where the Map Unit had no uops to process and was not stalled
+- MAP_DISPATCH_BUBBLE_TAKENBR_SLOT (484, 0x1e4): Slots where the Map Unit had no uops to process after a taken branch and was not stalled
 - MAP_INT_SME_UOP (645, 0x285): Mapped core Integer Unit uops for SME engine instructions
 - MAP_INT_UOP (636, 0x27c): Mapped Integer Unit uops
 - MAP_LDST_UOP (637, 0x27d): Mapped Load and Store Unit uops, including GPR to vector register converts; includes all instructions sent to the SME engine because they are processed through the Store Unit
@@ -89,6 +112,15 @@ Performance counters:
 - MAP_UOP (59, 0x3b): Mapped uops
 - MMU_TABLE_WALK_DATA (1032, 0x408): Table walk memory requests on behalf of data accesses
 - MMU_TABLE_WALK_INSTRUCTION (1031, 0x407): Table walk memory requests on behalf of instruction fetches
+- PL2_CACHE_ACCESS (2334, 0x91e): Any request that accessed the PL2 Cache
+- PL2_CACHE_ACCESS_INSTRUCTION (2328, 0x918): Instruction fetch requests that accessed the PL2 Cache
+- PL2_CACHE_ACCESS_MMU (2326, 0x916): Translation table walk requests that accessed the PL2 Cache
+- PL2_CACHE_ACCESS_ST (2332, 0x91c): Store requests that accessed the PL2 Cache
+- PL2_CACHE_MISS (2335, 0x91f): Any request that missed the PL2 Cache
+- PL2_CACHE_MISS_INSTRUCTION (2329, 0x919): Instruction fetch requests that missed the PL2 Cache
+- PL2_CACHE_MISS_LD (2331, 0x91b): Load requests that missed the PL2 Cache
+- PL2_CACHE_MISS_MMU (2327, 0x917): Translation table walk requests that missed the PL2 Cache
+- PL2_CACHE_MISS_ST (2333, 0x91d): Store requests that missed the PL2 Cache
 - RETIRE_UOP (58, 0x3a): All retired uops
 - SCHEDULE_EMPTY (849, 0x351): Cycles while the uop scheduler is empty
 - SCHEDULE_UOP_ANY (643, 0x283): Cycles while the uop scheduler issued at least 1 uop to any execution unit

@@ -9,6 +9,7 @@ Performance counters:
 - BRANCH_MISPRED_NONSPEC (203, 0xcb): Instruction architecturally executed, mispredicted branch
 - BRANCH_RET_INDIR_MISPRED_NONSPEC (200, 0xc8): Retired return instructions that mispredicted
 - CORE_ACTIVE_CYCLE (2, 0x2): Cycles while the core was active
+- DECODE_UOP (390, 0x186): Decoded uops
 - FETCH_RESTART (478, 0x1de): Fetch Unit internal restarts for any reason. Does not include branch mispredicts
 - FLUSH_RESTART_OTHER_NONSPEC (132, 0x84): Pipeline flush and restarts that were not due to branch mispredictions or memory order violations
 - INST_ALL (140, 0x8c): All retired instructions

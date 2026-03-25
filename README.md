@@ -35,4 +35,4 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 
 From PMU:
 
-a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2 = as5 = as5-1 = as5-2
+a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2 -> as5 = as5-1 = as5-2
