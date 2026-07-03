@@ -35,6 +35,11 @@ From PMU:
 
 a14 ~ a15 -> a16 = as1 = as2 = as3 -> as4 = as4-1 = as4-2 -> as5 = as5-1 = as5-2
 
+PMU evolution across generations:
+
+- **as4**: Add ARM architectural events (`ARM_BR_MIS_PRED`, `ARM_L1D_CACHE`, `ARM_STALL`, etc.), SME engine counters (`INST_SME_ENGINE_*`)
+- **as5**: Add load data source tracking (`LD_SRC_*`), PL2 cache events, additional ARM arch events
+
 See also: 
 
 - https://gist.github.com/ibireme/173517c208c7dc333ba962c1f0d67d12
