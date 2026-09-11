@@ -30,9 +30,9 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - Sotra: cpu_100000c_2_f76c5b1a.md -> as5-1.md
 - A19 (H18A Tilos): cpu_100000c_2_1d7a72b.md -> as5-2.md
 - A19 Pro (H18P Thera): cpu_100000c_2_ab345f09.md -> as5-2.md
-- Komodo: 6d0ccb0c
-- Borneo: 7db56df1
-- Nevis: 37652b0c
+- H18G Komodo: 6d0ccb0c
+- H19P Borneo: 7db56df1
+- M12 Nevis: 37652b0c
 
 From PMU:
 
@@ -51,7 +51,8 @@ See also:
 - https://en.wikipedia.org/wiki/List_of_Apple_codenames
 - https://github.com/xybp888/iOS-SDKs/blob/d7f1be9f5b79cffcfb547bbd930f92ec0fc35038/iPhoneOS17.5.sdk/usr/include/mach/machine.h#L365
 - /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/machine.h
-- /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine.h
 - /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/arm/cpuid.h
+- /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine.h
+- /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/arm/cpuid.h
 - https://asahilinux.org/docs/hw/soc/soc-codenames/
 
