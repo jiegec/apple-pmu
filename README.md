@@ -30,6 +30,9 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - Sotra: cpu_100000c_2_f76c5b1a.md -> as5-1.md
 - A19 (H18A Tilos): cpu_100000c_2_1d7a72b.md -> as5-2.md
 - A19 Pro (H18P Thera): cpu_100000c_2_ab345f09.md -> as5-2.md
+- Komodo: 6d0ccb0c
+- Borneo: 7db56df1
+- Nevis: 37652b0c
 
 From PMU:
 
