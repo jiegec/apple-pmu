@@ -27,11 +27,11 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - A18 Pro (H17P Tahiti): cpu_100000c_2_75d4acb9.md -> as4-2.md
 - M5 (H17G Hidra): cpu_100000c_2_1d5a87e8.md -> as5.md
 - cpu_100000c_2_da9d04c3.md -> as5-1.md
-- Sotra: cpu_100000c_2_f76c5b1a.md -> as5-1.md
+- M5 Pro (H17S Sotra S): cpu_100000c_2_f76c5b1a.md -> as5-1.md
 - A19 (H18A Tilos): cpu_100000c_2_1d7a72b.md -> as5-2.md
 - A19 Pro (H18P Thera): cpu_100000c_2_ab345f09.md -> as5-2.md
-- H18G Komodo: 6d0ccb0c
-- H19P Borneo: 7db56df1
+- M6 (H18G Komodo): 6d0ccb0c
+- A20 (H19P Borneo): 7db56df1
 - M12 Nevis: 37652b0c
 
 From PMU:
@@ -50,6 +50,7 @@ See also:
 - https://github.com/Homebrew/brew/blob/master/Library/Homebrew/extend/os/mac/hardware/cpu.rb
 - https://en.wikipedia.org/wiki/List_of_Apple_codenames
 - https://github.com/xybp888/iOS-SDKs/blob/d7f1be9f5b79cffcfb547bbd930f92ec0fc35038/iPhoneOS17.5.sdk/usr/include/mach/machine.h#L365
+- https://theapplewiki.com/wiki/User:Ilikeiphone123/Playground/Codenames
 - /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/machine.h
 - /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/arm/cpuid.h
 - /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine.h
