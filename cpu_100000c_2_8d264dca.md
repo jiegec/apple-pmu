@@ -81,8 +81,8 @@ Performance counters:
 - LDST_UNIT_WAITING_SME_ENGINE_MEM_DATA (655, 0x28f): Cycles while the core is waiting for the SME engine to produce memory data, and no uop was issued by the scheduler, prioritized
 - LDST_X64_UOP (1457, 0x5b1): Load and store uops that crossed a 64B boundary
 - LDST_XPG_UOP (1458, 0x5b2): Load and store uops that crossed a 16KiB page boundary.  An SME access is considered cross-page if any bytes are accessed in the high portion (second page), regardless if any bytes are accessed in the low portion (first page), after predication is applied. An SME operation that only touches the low portion (first page) after predication is applied is not considered cross-page.
-- LD_BLOCKED_BY_SME_LDST (1324, 0x52c): Core load uops blocked by SME accesses to same 4KiB page
 - LD_NT_UOP (1510, 0x5e6): Load uops that executed with non-temporal hint; excludes SSVE/SME loads because they utilize the Store Unit
+- LD_SME_MEM_ORDER_VIOL_LD_NONSPEC (1327, 0x52f): Retired SME loads that triggered memory order violations with core loads
 - LD_SME_NORMAL_UOP (1397, 0x575): SME engine load uops with Normal memory type
 - LD_SME_NT_UOP (1395, 0x573): SME engine load uops that executed with non-temporal hint
 - LD_SRC_CORE_SAMECLUSTER_NONSPEC (2226, 0x8b2): Retired load instructions where the data is supplied by another core in the same cluster.  See Apple Silicon CPU Optimization Guide.
@@ -129,9 +129,9 @@ Performance counters:
 - SME_ENGINE_SM_ENABLE (646, 0x286): Transitions into SME engine Streaming Mode (PSTATE.SM: 0 to 1)
 - SME_ENGINE_SM_ZA_ENABLE (647, 0x287): Simultaneous transitions into SME engine Streaming Mode and ZA Mode (PSTATE.SM: 0 to 1 and PSTATE.ZA: 0 to 1)
 - SME_ENGINE_ZA_ENABLED_SM_DISABLED (648, 0x288): Cycles while SME engine ZA Mode is enabled but Streaming Mode is not (PSTATE.ZA=1 and PSTATE.SM=0)
-- ST_BARRIER_BLOCKED_BY_SME_LDST (1326, 0x52e): Core store uops blocked by SME accesses to same 4KiB page, and any barriers or store-release uops blocked by SME accesses
 - ST_MEM_ORDER_VIOL_LD_NONSPEC (2244, 0x8c4): Retired core store uops that triggered memory order violations with core load uops
 - ST_NT_UOP (1509, 0x5e5): Store uops that executed with non-temporal hint; includes SSVE/SME loads because they utilize the Store Unit
+- ST_SME_MEM_ORDER_VIOL_LD_NONSPEC (1313, 0x521): Retired SME stores that triggered memory order violations with core loads
 - ST_SME_NORMAL_UOP (1398, 0x576): SME engine store uops with Normal memory type
 - ST_SME_NT_UOP (1396, 0x574): SME engine store uops that executed with non-temporal hint
 - ST_UNIT_UOP (1447, 0x5a7): Uops that flowed through the Store Unit

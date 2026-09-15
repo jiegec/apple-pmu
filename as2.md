@@ -1,8 +1,8 @@
 Marketing name: Apple silicon
 
 Performance counters:
-- ATOMIC_OR_EXCLUSIVE_FAIL (1460, 0x5b4): Atomic or exclusive instruction failed due to contention (for exclusives, incorrectly undercounts for exclusives when the cache line is initially found in shared state, however counts correctly for atomics)
-- ATOMIC_OR_EXCLUSIVE_SUCC (1459, 0x5b3): Atomic or exclusive instruction successfully completed (for exclusives, incorrectly undercounts for exclusives when the cache line is initially found in shared state, however counts correctly for atomics)
+- ATOMIC_OR_EXCLUSIVE_FAIL (1460, 0x5b4): Atomic or exclusive instruction failed due to contention.  For exclusives, incorrectly undercounts for exclusives when the cache line is initially found in shared state, however counts correctly for atomics.
+- ATOMIC_OR_EXCLUSIVE_SUCC (1459, 0x5b3): Atomic or exclusive instruction successfully completed.  For exclusives, incorrectly undercounts for exclusives when the cache line is initially found in shared state, however counts correctly for atomics.
 - BRANCH_CALL_INDIR_MISPRED_NONSPEC (202, 0xca): Retired indirect call instructions mispredicted
 - BRANCH_COND_MISPRED_NONSPEC (197, 0xc5): Retired conditional branch instructions that mispredicted
 - BRANCH_INDIR_MISPRED_NONSPEC (198, 0xc6): Retired indirect branch instructions including calls and returns that mispredicted
@@ -21,10 +21,10 @@ Performance counters:
 - INST_BRANCH_TAKEN (144, 0x90): Retired taken branch instructions
 - INST_INT_ALU (151, 0x97): Retired non-branch and non-load/store Integer Unit instructions
 - INST_INT_LD (149, 0x95): Retired load Integer Unit instructions
-- INST_INT_ST (150, 0x96): Retired store Integer Unit instructions; does not count DC ZVA (Data Cache Zero by VA)
-- INST_LDST (155, 0x9b): Retired load and store instructions; does not count DC ZVA (Data Cache Zero by VA)
+- INST_INT_ST (150, 0x96): Retired store Integer Unit instructions.  Does not count DC ZVA (Data Cache Zero by VA).
+- INST_LDST (155, 0x9b): Retired load and store instructions.  Does not count DC ZVA (Data Cache Zero by VA).
 - INST_SIMD_ALU (154, 0x9a): Retired non-load/store Advanced SIMD and FP Unit instructions
-- INST_SIMD_ALU_VEC (159, 0x9f): Retired non-load/store vector Advanced SIMD  instructions
+- INST_SIMD_ALU_VEC (159, 0x9f): Retired non-load/store vector Advanced SIMD instructions
 - INST_SIMD_LD (152, 0x98): Retired load Advanced SIMD and FP Unit instructions
 - INST_SIMD_ST (153, 0x99): Retired store Advanced SIMD and FP Unit instructions
 - INTERRUPT_PENDING (620, 0x26c): Cycles while an interrupt was pending because it was masked
@@ -45,14 +45,14 @@ Performance counters:
 - LDST_UNIT_OLD_L1D_CACHE_MISS (656, 0x290): Cycles while an old load or store uop is waiting for data after an L1 Data Cache miss
 - LDST_UNIT_WAITING_OLD_L1D_CACHE_MISS (657, 0x291): Cycles while an old load or store uop is waiting for data after an L1 Data Cache miss, and no uop was issued by the scheduler, prioritized
 - LDST_X64_UOP (1457, 0x5b1): Load and store uops that crossed a 64B boundary
-- LDST_XPG_UOP (1458, 0x5b2): Load and store uops that crossed a 16KiB page boundary; an SME access is considered cross-page if any bytes are accessed in the high portion (second page), regardless if any bytes are accessed in the low portion (first page), after predication is applied. An SME operation that only touches the low portion (first page) after predication is applied is not considered cross-page.
+- LDST_XPG_UOP (1458, 0x5b2): Load and store uops that crossed a 16KiB page boundary.  An SME access is considered cross-page if any bytes are accessed in the high portion (second page), regardless if any bytes are accessed in the low portion (first page), after predication is applied. An SME operation that only touches the low portion (first page) after predication is applied is not considered cross-page.
 - LD_NT_UOP (1510, 0x5e6): Load uops that executed with non-temporal hint; excludes SSVE/SME loads because they utilize the Store Unit
 - LD_UNIT_UOP (1446, 0x5a6): Uops that flowed through the Load Unit
 - MAP_DISPATCH_BUBBLE (470, 0x1d6): Cycles while the Map Unit had no uops to process and was not stalled
 - MAP_DISPATCH_BUBBLE_IC (386, 0x182): Cycles while the Map Unit had no uops to process due to L1 Instruction Cache and was not stalled
 - MAP_DISPATCH_BUBBLE_ITLB (387, 0x183): Cycles while the Map Unit had no uops to process due to L1 Instruction TLB and was not stalled
 - MAP_INT_UOP (636, 0x27c): Mapped Integer Unit uops
-- MAP_LDST_UOP (637, 0x27d): Mapped Load and Store Unit uops, including GPR to vector register converts; includes all instructions sent to the SME engine because they are processed through the Store Unit
+- MAP_LDST_UOP (637, 0x27d): Mapped Load and Store Unit uops, including GPR to vector register converts.  Includes all instructions sent to the SME engine because they are processed through the Store Unit.
 - MAP_REWIND (629, 0x275): Cycles while the Map Unit was blocked while rewinding due to flush and restart
 - MAP_SIMD_UOP (638, 0x27e): Mapped Advanced SIMD and FP Unit uops
 - MAP_STALL (630, 0x276): Cycles while the Map Unit was stalled for any reason
