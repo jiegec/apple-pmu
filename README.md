@@ -21,7 +21,7 @@ The filenames are derived from the output of `sysctl -nx hw.cputype hw.cpusubtyp
 - A18 (H17A Tupai): cpu_100000c_2_204526d0.md
 - A18 Pro (H17P Tahiti): cpu_100000c_2_75d4acb9.md
 - M5 (H17G Hidra): cpu_100000c_2_1d5a87e8.md
-- M5 Pro (H17S Sotra S) / M5 Max: cpu_100000c_2_f76c5b1a.md
+- M5 Pro (H17S Sotra S) / M5 Max (H17C Sotra C): cpu_100000c_2_f76c5b1a.md
 - A19 (H18A Tilos): cpu_100000c_2_1d7a72b.md
 - A19 Pro (H18P Thera): cpu_100000c_2_ab345f09.md
 - M6 (H18G Komodo): cpu_100000c_2_6d0ccb0c.md, cpu_100000c_c_6d0ccb0c.md
