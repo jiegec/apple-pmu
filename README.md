@@ -24,10 +24,10 @@ Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`:
 - M5 Pro (H17S Sotra S) / M5 Max: cpu_100000c_2_f76c5b1a.md
 - A19 (H18A Tilos): cpu_100000c_2_1d7a72b.md
 - A19 Pro (H18P Thera): cpu_100000c_2_ab345f09.md
-- M6 (H18G Komodo): cpu_100000c_c_6d0ccb0c.md
-- A20 (H19P Borneo): cpu_100000c_c_7db56df1.md
-- M12 Nevis: cpu_100000c_c_37652b0c.md
-- cpu_100000c_c_8d264dca.md
+- M6 (H18G Komodo): cpu_100000c_2_6d0ccb0c.md, cpu_100000c_c_6d0ccb0c.md
+- A20 (H19P Borneo): cpu_100000c_2_7db56df1.md, cpu_100000c_c_7db56df1.md
+- M12 Nevis: cpu_100000c_2_37652b0c.md, cpu_100000c_c_37652b0c.md
+- cpu_100000c_2_8d264dca.md, cpu_100000c_c_8d264dca.md
 
 From PMU:
 
