@@ -1,17 +1,17 @@
 # apple-pmu
 
-Dump Apple PMU counter definitions from `/usr/share/kpep` in macOS. Also in `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/*/DeveloperDiskImage.dmg`
+Dump Apple PMU counter definitions from `/usr/share/kpep` on macOS. Also found in `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/*/DeveloperDiskImage.dmg`
 
-Also see [cyyself/m1-pmu-gen](https://github.com/cyyself/m1-pmu-gen) to see how to integrate the counters into perf.
+Also see [cyyself/m1-pmu-gen](https://github.com/cyyself/m1-pmu-gen) for how to integrate the counters into perf.
 
-Output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`. The `cpu_<cputype>_<cpusubtype>_<cpufamily>.md` name comes from this tuple (for cpusubtype, `1` = `CPU_SUBTYPE_ARM64_V8`, `2` = `CPU_SUBTYPE_ARM64E`, `c` = `CPU_SUBTYPE_ARM64E_X1`).
+The filenames are derived from the output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`. The `cpu_<cputype>_<cpusubtype>_<cpufamily>.md` name comes from this tuple (for cpusubtype, `1` = `CPU_SUBTYPE_ARM64_V8`, `2` = `CPU_SUBTYPE_ARM64E`, `c` = `CPU_SUBTYPE_ARM64E_X1`).
 
 - A8 Typhoon: cpu_100000c_1_2c91a47e.md
-- A12(H11) Vortex+Tempest: cpu_100000c_2_7d34b9f.md
-- A13(H12) Lightning+Thunder: cpu_100000c_2_462504d2.md
-- A14/M1(H13) Firestorm+Icestorm: cpu_100000c_2_1b588bb3.md
-- A15/M2(H14) Avalanche+Blizzard: cpu_100000c_2_da33d83d.md
-- A16(H15) Everest+Sawtooth: cpu_100000c_2_8765edea.md
+- A12 (H11) Vortex+Tempest: cpu_100000c_2_7d34b9f.md
+- A13 (H12) Lightning+Thunder: cpu_100000c_2_462504d2.md
+- A14/M1 (H13) Firestorm+Icestorm: cpu_100000c_2_1b588bb3.md
+- A15/M2 (H14) Avalanche+Blizzard: cpu_100000c_2_da33d83d.md
+- A16 (H15) Everest+Sawtooth: cpu_100000c_2_8765edea.md
 - M3 (H15 Ibiza): cpu_100000c_2_fa33415e.md
 - A17 Pro (H15 Coll): cpu_100000c_2_2876f5b5.md
 - M3 Pro (H15 Lobos): cpu_100000c_2_5f4dea93.md
@@ -48,7 +48,7 @@ PMU evolution across generations:
 - **A19/M5**: Add `ARM_L1I_CACHE` / `ARM_MEM_ACCESS*` (including checked accesses), load data source tracking (`LD_SRC_*`), PL2 cache events (`PL2_CACHE_*`), MTE events (`LDST_MEM_ACCESS_CHECKED_X2K`, `LDST_OLDEST_MTE_TAG_CHECK_CYCLE`), more branch events (`INST_BRANCH_CALL_INDIR`, `BRANCH_BR_INDIR_MISPRED_NONSPEC`), `INST_MICROCODED` and more SME wait events
 - **A20/M6**: Drop `LD_BLOCKED_BY_SME_LDST` / `ST_BARRIER_BLOCKED_BY_SME_LDST`, add `LD_SME_MEM_ORDER_VIOL_LD_NONSPEC` / `ST_SME_MEM_ORDER_VIOL_LD_NONSPEC`
 
-See also: 
+See also:
 
 - https://gist.github.com/ibireme/173517c208c7dc333ba962c1f0d67d12
 - https://github.com/Tencent/ncnn/blob/master/src/cpu.cpp
