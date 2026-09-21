@@ -6,31 +6,31 @@ Also see [cyyself/m1-pmu-gen](https://github.com/cyyself/m1-pmu-gen) for how to 
 
 The filenames are derived from the output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`. The `cpu_<cputype>_<cpusubtype>_<cpufamily>.md` name comes from this tuple (for cpusubtype, `1` = `CPU_SUBTYPE_ARM64_V8`, `2` = `CPU_SUBTYPE_ARM64E`, `c` = `CPU_SUBTYPE_ARM64E_X1`).
 
-- A8 Typhoon: cpu_100000c_1_2c91a47e.md
-- A12 (H11) Vortex+Tempest: cpu_100000c_2_7d34b9f.md
-- A13 (H12) Lightning+Thunder: cpu_100000c_2_462504d2.md
-- A14/M1 (H13) Firestorm+Icestorm: cpu_100000c_2_1b588bb3.md
-- A15/M2 (H14) Avalanche+Blizzard: cpu_100000c_2_da33d83d.md
+- A8 (H7, 0x2) Typhoon: cpu_100000c_1_2c91a47e.md
+- A12 (H11, 0XB/0xC) Vortex+Tempest: cpu_100000c_2_7d34b9f.md
+- A13 (H12, 0x12/0x13) Lightning+Thunder: cpu_100000c_2_462504d2.md
+- A14/M1 (H13, 0x20/0x21) Firestorm+Icestorm: cpu_100000c_2_1b588bb3.md
+- A15/M2 (H14, 0x30/0x31) Avalanche+Blizzard: cpu_100000c_2_da33d83d.md
 
-- M3 (H15 Ibiza): cpu_100000c_2_fa33415e.md
-- M3 Pro (H15 Lobos): cpu_100000c_2_5f4dea93.md
-- M3 Max (H15 Palma): cpu_100000c_2_72015832.md
-- A16 (H15) Everest+Sawtooth: cpu_100000c_2_8765edea.md
-- A17 Pro (H15 Coll): cpu_100000c_2_2876f5b5.md
+- A16 (H15, 0x40/0x41) Everest+Sawtooth: cpu_100000c_2_8765edea.md
+- M3 (H15 Ibiza, 0x42/0x43): cpu_100000c_2_fa33415e.md
+- M3 Pro (H15 Lobos, 0x44/0x45): cpu_100000c_2_5f4dea93.md
+- M3 Max (H15 Palma, 0x48/0x49): cpu_100000c_2_72015832.md
+- A17 Pro (H15 Coll, 0x50/0x51): cpu_100000c_2_2876f5b5.md
 
-- M4 (H16G Donan): cpu_100000c_2_6f5129ac.md
-- M4 Pro (H16S Brava Chop) / M4 Max (H16C Brava): cpu_100000c_2_17d5b93a.md
-- A18 (H17A Tupai): cpu_100000c_2_204526d0.md
-- A18 Pro (H17P Tahiti): cpu_100000c_2_75d4acb9.md
+- M4 (H16G Donan, 0x52/0x53): cpu_100000c_2_6f5129ac.md
+- M4 Pro (H16S Brava Chop, 0x54/0x55) / M4 Max (H16C Brava, 0x58/0x59): cpu_100000c_2_17d5b93a.md
+- A18 Pro (H17P Tahiti, 0x60/0x61): cpu_100000c_2_75d4acb9.md
+- A18 (H17A Tupai, 0x6a/0x6b): cpu_100000c_2_204526d0.md
 
-- M5 (H17G Hidra): cpu_100000c_2_1d5a87e8.md
-- M5 Pro (H17S Sotra S) / M5 Max (H17C Sotra C): cpu_100000c_2_f76c5b1a.md
-- A19 (H18A Tilos): cpu_100000c_2_1d7a72b.md
-- A19 Pro (H18P Thera): cpu_100000c_2_ab345f09.md
+- M5 (H17G Hidra, 0x62/0x63): cpu_100000c_2_1d5a87e8.md
+- M5 Pro (H17S Sotra S, 0x64/0x65) / M5 Max (H17C Sotra C, 0x68/0x69): cpu_100000c_2_f76c5b1a.md
+- A19 (H18A Tilos, 0x7a/0x7b): cpu_100000c_2_1d7a72b.md
+- A19 Pro (H18P Thera, 0x70/0x71): cpu_100000c_2_ab345f09.md
 
-- M6 (H18G Komodo): cpu_100000c_2_6d0ccb0c.md, cpu_100000c_c_6d0ccb0c.md
-- A20 (H19P Borneo): cpu_100000c_2_7db56df1.md, cpu_100000c_c_7db56df1.md
-- M12 Nevis: cpu_100000c_2_37652b0c.md, cpu_100000c_c_37652b0c.md
+- M6 (H18G Komodo, 0x72/0x73): cpu_100000c_2_6d0ccb0c.md, cpu_100000c_c_6d0ccb0c.md
+- A20 (H19P Borneo, 0x80/0x81): cpu_100000c_2_7db56df1.md, cpu_100000c_c_7db56df1.md
+- Unknown (M12 Nevis, 0x86): cpu_100000c_2_37652b0c.md, cpu_100000c_c_37652b0c.md
 - Unknown: cpu_100000c_2_8d264dca.md, cpu_100000c_c_8d264dca.md
 
 Identical files (same counter set, different `hw.cpufamily`):
