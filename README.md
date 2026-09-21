@@ -9,10 +9,10 @@ The filenames are derived from the output of `sysctl -nx hw.cputype hw.cpusubtyp
 - A8 (H7, 0x2) Typhoon: cpu_100000c_1_2c91a47e.md
 - A12 (H11, 0XB/0xC) Vortex+Tempest: cpu_100000c_2_7d34b9f.md
 - A13 (H12, 0x12/0x13) Lightning+Thunder: cpu_100000c_2_462504d2.md
-- A14/M1 (H13, 0x20/0x21) Firestorm+Icestorm: cpu_100000c_2_1b588bb3.md
-- A15/M2 (H14, 0x30/0x31) Avalanche+Blizzard: cpu_100000c_2_da33d83d.md
+- A14 (H13P Sicily, 0x20/0x21) / M1 (H13G Tonga, 0x22/0x23) / M1  Pro (H13J Jade Chop, 0x24/0x25) / M1 Max (H13J Jade Die, 0x28/0x29) Firestorm+Icestorm: cpu_100000c_2_1b588bb3.md
+- A15 (H14P Ellis, 0x30/0x31) / M2 (H14G Staten, 0x32/0x33) / M2 Pro (H14S Rhodes Chop, 0x34/0x35) / M2 Max (H14C Rhodes Die, 0x38/0x39) Avalanche+Blizzard: cpu_100000c_2_da33d83d.md
 
-- A16 (H15, 0x40/0x41) Everest+Sawtooth: cpu_100000c_2_8765edea.md
+- A16 (H15 Crete, 0x40/0x41) Everest+Sawtooth: cpu_100000c_2_8765edea.md
 - M3 (H15 Ibiza, 0x42/0x43): cpu_100000c_2_fa33415e.md
 - M3 Pro (H15 Lobos, 0x44/0x45): cpu_100000c_2_5f4dea93.md
 - M3 Max (H15 Palma, 0x48/0x49): cpu_100000c_2_72015832.md
