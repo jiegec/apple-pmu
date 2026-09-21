@@ -7,7 +7,7 @@ Also see [cyyself/m1-pmu-gen](https://github.com/cyyself/m1-pmu-gen) for how to 
 The filenames are derived from the output of `sysctl -nx hw.cputype hw.cpusubtype hw.cpufamily`. The `cpu_<cputype>_<cpusubtype>_<cpufamily>.md` name comes from this tuple (for cpusubtype, `1` = `CPU_SUBTYPE_ARM64_V8`, `2` = `CPU_SUBTYPE_ARM64E`, `c` = `CPU_SUBTYPE_ARM64E_X1`).
 
 - A8 (H7, 0x2) Typhoon: cpu_100000c_1_2c91a47e.md
-- A12 (H11, 0XB/0xC) Vortex+Tempest: cpu_100000c_2_7d34b9f.md
+- A12 (H11, 0xB/0xC) Vortex+Tempest: cpu_100000c_2_7d34b9f.md
 - A13 (H12, 0x12/0x13) Lightning+Thunder: cpu_100000c_2_462504d2.md
 - A14 (H13P Sicily, 0x20/0x21) / M1 (H13G Tonga, 0x22/0x23) / M1  Pro (H13J Jade Chop, 0x24/0x25) / M1 Max (H13J Jade Die, 0x28/0x29) Firestorm+Icestorm: cpu_100000c_2_1b588bb3.md
 - A15 (H14P Ellis, 0x30/0x31) / M2 (H14G Staten, 0x32/0x33) / M2 Pro (H14S Rhodes Chop, 0x34/0x35) / M2 Max (H14C Rhodes Die, 0x38/0x39) Avalanche+Blizzard: cpu_100000c_2_da33d83d.md
